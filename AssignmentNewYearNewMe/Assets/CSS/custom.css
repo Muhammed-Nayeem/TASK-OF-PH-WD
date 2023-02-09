@@ -180,7 +180,7 @@ body {
 
 /* news later area */
 .newslater-area {
-  padding: 50px 0;
+  padding: 50px 0 90px 0;
   background: #fafdff;
 }
 .newslater-content {
@@ -224,4 +224,95 @@ body {
   padding: 12px 20px;
   font-weight: 600;
   border-radius: 3px;
+}
+
+/* footer area */
+.footer-area {
+  padding: 50px 0;
+  background-color: #333;
+}
+.footer-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.footer-text {
+  flex-basis: 45%;
+}
+.footer-text h2 {
+  text-transform: capitalize;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-text p {
+  font-size: 16px;
+  color: #d7dadb;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.footer-text .social {
+  display: flex;
+}
+.footer-text .social li {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  margin-right: 15px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+.footer-text .social li a {
+  font-size: 18px;
+}
+.footer-text .social li a#f {
+  color: #3b5998;
+}
+.footer-text .social li a#t {
+  color: #00acee;
+}
+.footer-text .social li a#y {
+  color: #c4302b;
+}
+.footer-contact {
+  margin-bottom: 20px;
+}
+.footer-contact p {
+  font-size: 16px;
+  color: #fafdff;
+  line-height: 0.5;
+}
+.footer-subscribe {
+  flex-basis: 30%;
+}
+.footer-subscribe h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-subscribe #email {
+  font-size: 16px;
+  padding: 12px 30px;
+  background-color: #333;
+  border: 1px solid #fafdff;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+.footer-subscribe #email::placeholder {
+  color: #fafdff;
+  opacity: .5;
+}
+.footer-subscribe .submit-btn {
+  display: block;
+  margin-top: 10px;
+  color: #f15b22;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 16px;
+  border-radius: 3px;
+  outline: none;
+  border: 0;
 }
