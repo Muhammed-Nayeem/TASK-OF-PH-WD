@@ -67,3 +67,48 @@ body {
   background-color: #F15B22;
   border-radius: 3px;
 }
+
+/* previous year area */
+.previous-year-area {
+  padding: 100px 0;
+}
+.previous-year-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.previous-year-image {
+  flex-basis: 45%;
+}
+.previous-year-image img {
+  width: 100%;
+}
+.previous-year-text {
+  flex-basis: 45%;
+  padding: 10px 30px;
+}
+.previous-year-text h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.previous-year-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #424242;
+}
+.previous-year-text ul {
+  margin-top: 15px;
+}
+.previous-year-text ul li {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #424242;
+  padding: 5px 0;
+}
+.previous-year-text ul li i {
+  color: #21a521;
+  font-size: 18px;
+}
