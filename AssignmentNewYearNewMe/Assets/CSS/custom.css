@@ -64,7 +64,7 @@ body {
   text-transform: capitalize;
   font-size: 16px;
   color: #fff;
-  background-color: #F15B22;
+  background-color: #f15b22;
   border-radius: 3px;
 }
 
@@ -111,4 +111,70 @@ body {
 .previous-year-text ul li i {
   color: #21a521;
   font-size: 18px;
+}
+
+/* plan area */
+.plan-area {
+  padding: 80px 0;
+  background-color: #fafdff;
+}
+.plan-area-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.plan-area-title h1 {
+  font-size: 40px;
+  color: #333;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+  position: relative;
+}
+.plan-area-title h1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f15b22;
+}
+.plan-area-title p {
+  font-size: 16px;
+  color: #424242;
+}
+.my-plans {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.plan {
+  flex-basis: 23%;
+  border-radius: 8px;
+  background: #fafdff;
+  box-shadow:  15px 15px 30px #d7dadb,
+               -15px -15px 30px #ffffff;
+  padding: 15px;
+  text-align: left;
+  transition: .5s ease;
+}
+.plan:hover {
+  transform: translateY(-5px);
+}
+.plan img {
+  width: 50px;
+  height: 50px;
+}
+.plan h2 {
+  text-transform: capitalize;
+  font-size: 22px;
+  color: #333;
+  margin: 10px 0;
+}
+.plan p {
+  font-size: 16px;
+  color: #424242;
+  line-height: 1.5;
 }
