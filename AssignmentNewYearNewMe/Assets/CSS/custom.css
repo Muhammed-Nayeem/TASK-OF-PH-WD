@@ -40,9 +40,8 @@ body {
   overflow: hidden;
 }
 .banner-text {
-  position: absolute;
-  top: 100px;
-  right: 100px;
+  float: right;
+  margin-top: 100px;
   width: 500px;
   text-align: right;
   padding: 30px;
