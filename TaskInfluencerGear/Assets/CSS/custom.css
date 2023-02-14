@@ -7,9 +7,12 @@
   --second-primary-font-color: #787885;
   --primary-font: "Poppins", sans-serif;
   --primary-font-size: 16px;
+  --header-background-color: #fffdfd;
   --footer-background-color: #0a0826;
   --primary-color: #ffffff;
   --button-background-color: #e02c6d;
+  --hover-color: #e02c6d;
+  --border-color: #f5f5f5;
 }
 
 /*====== common css style ======*/
@@ -41,4 +44,63 @@ body {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+}
+
+/*====== Header Area ======*/
+.header-area {
+  background-color: var(--header-background-color);
+  padding: 10px 0;
+  height: 70px;
+  line-height: 50px;
+  border: 1px solid var(--border-color);
+}
+.header-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  flex-basis: 30%;
+}
+.logo a {
+  display: block;
+  color: var(--primary-font-color);
+}
+.logo a h1 {
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.navbar {
+  flex-basis: 62%;
+}
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar ul li {
+  margin-left: 25px;
+}
+.navbar ul li a {
+  text-transform: capitalize;
+  color: var(--primary-font-color);
+  font-size: 16px;
+  transition: .5s ease;
+}
+.navbar ul li a:hover,
+.nav-icons ul li a:hover {
+  color: var(--hover-color);
+}
+.nav-icons ul {
+  display: flex;
+}
+.nav-icons ul li {
+  margin-left: 25px;
+}
+.nav-icons ul li a {
+  color: var(--primary-font-color);
+  transition: .5s ease;
+}
+.nav-icons ul li a i {
+  font-size: 16px;
 }
