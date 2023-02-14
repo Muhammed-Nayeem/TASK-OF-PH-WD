@@ -249,14 +249,14 @@ body {
   align-items: center;
 }
 .more-products {
-  text-align: center;
+  text-align: right;
+  margin-top: 45px;
 }
 .products-btn {
   text-transform: capitalize;
   display: inline-block;
   color: var(--hover-color);
   font-size: 16px;
-  margin-top: 30px;
 }
 .products-btn i {
   padding-left: 5px;
@@ -265,9 +265,8 @@ body {
   background-color: var(--primary-color);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 15px 15px 28px #e3e3e3, 
-              -15px -15px 28px #ffffff;
-  transition: .5s ease;
+  box-shadow: 15px 15px 28px #e3e3e3, -15px -15px 28px #ffffff;
+  transition: 0.5s ease;
 }
 .product:hover {
   transform: translateY(-5px);
@@ -313,4 +312,85 @@ body {
 .product-text .product-info {
   font-size: 16px;
   color: var(--second-primary-font-color);
+}
+
+/*======= Feature Area =======*/
+.feature-area {
+  padding: 30px 0 70px 0;
+}
+.feature {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature-img {
+  flex-basis: 35%;
+}
+.feature-img img {
+  width: 100%;
+}
+.feature-text {
+  flex-basis: 55%;
+}
+.feature-text h1 {
+  text-transform: capitalize;
+  color: var(--primary-font-color);
+  font-size: 2em;
+}
+.feature-text p {
+  margin: 10px 0;
+  color: var(--second-primary-font-color);
+}
+.feature-text .feature-btn {
+  display: inline-block;
+  text-transform: capitalize;
+  background-color: var(--button-background-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  font-size: var(--primary-font-size);
+  border-radius: 3px;
+}
+.feature-text .feature-btn i {
+  padding-left: 5px;
+}
+
+/*======= Footer Area =======*/
+.footer-area {
+  padding: 40px 0;
+  background-color: var(--footer-background-color);
+}
+.footer-content {
+  text-align: center;
+}
+.footer-content h1 {
+  text-transform: capitalize;
+  color: var(--primary-color);
+  font-size: 2em;
+}
+.footer-content p {
+  text-transform: capitalize;
+  color: var(--second-primary-font-color);
+  margin-bottom: 15px;
+}
+.footer-content .footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content .footer-icons li {
+  margin: 0 10px;
+}
+.footer-content .footer-icons li a {
+  color: var(--primary-color);
+  background-color: var(--primary-font-color);
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.footer-content .footer-icons li a i {
+  font-size: 13px;
 }
