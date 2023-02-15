@@ -45,6 +45,17 @@ body {
   margin: 0 auto;
 }
 
+.btn-primary {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: 400;
+  background-color: var(--btn-bg-color);
+  color: var(--white-color);
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+
 /*========= header area =========*/
 .header-area {
   background-color: var(--bg-color);
@@ -121,16 +132,6 @@ body {
   line-height: 25px;
   color: var(--font-darkgray);
   margin-bottom: 20px;
-}
-.banner-texts .btn-primary {
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 1em;
-  font-weight: 400;
-  background-color: var(--btn-bg-color);
-  color: var(--white-color);
-  padding: 12px 20px;
-  border-radius: 5px;
 }
 .banner-img {
   flex-basis: 100%;
