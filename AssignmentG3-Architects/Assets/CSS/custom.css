@@ -445,3 +445,58 @@ body {
   font-size: 1em;
   border: 0;
 }
+
+/*========= sponsors area =========*/
+.sponsors-area {
+  padding: 70px 0;
+}
+.sponsors-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sponsors-title h2 {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: var(--font-dark);
+  position: relative;
+}
+.sponsors-title h2::after,
+.sponsors-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--orange-color);
+}
+.sponsors-title h2::before {
+  bottom: -6px;
+  width: 30px;
+}
+.sponsors-title p {
+  font-size: 1em;
+  line-height: 1.3;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.sponsors {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sponsor {
+  flex-basis: 10%;
+}
+.sponsor img {
+  filter: grayscale(100%);
+  transition: .5s ease;
+}
+.sponsor img:hover {
+  filter: grayscale(10%);
+}
