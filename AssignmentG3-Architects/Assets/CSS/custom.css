@@ -8,6 +8,7 @@
   --white-color: #ffffff;
   --font-dark: #131313;
   --font-darkgray: #727272;
+  --font-orange: #ff900e;
   --btn-bg-color: #ff900e;
   --footer-bg-color: #fff4e7;
   --hover-color: #ff900e;
@@ -135,4 +136,52 @@ body {
 }
 .banner-img {
   flex-basis: 100%;
+}
+
+/*========= about area =========*/
+.about-area {
+  padding: 70px 0;
+}
+.about-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-imgs {
+  flex-basis: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.about-img {
+  height: 300px;
+}
+.about-img img {
+  height: 100%;
+}
+.about-texts {
+  flex-basis: 38%;
+}
+.about-texts h2 {
+  text-transform: capitalize;
+  font-size: 2.3em;
+  color: var(--font-dark);
+  line-height: 45px;
+  margin-bottom: 10px;
+}
+.about-texts h2 .txt-p1 {
+  color: var(--font-darkgray);
+}
+.about-texts h2 .txt-p2 {
+  display: block;
+  color: var(--font-orange);
+}
+.about-texts p {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--font-darkgray);
+  line-height: 25px;
+  margin-bottom: 20px;
 }
