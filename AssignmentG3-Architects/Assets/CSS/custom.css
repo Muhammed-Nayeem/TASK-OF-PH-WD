@@ -500,3 +500,17 @@ body {
 .sponsor img:hover {
   filter: grayscale(10%);
 }
+
+/*========= footer area =========*/
+.footer-area {
+  padding: 25px 0;
+  background-color: var(--bg-color);
+}
+.footer-content {
+  text-align: center;
+}
+.footer-content p {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--font-dark);
+}
