@@ -1,16 +1,16 @@
 /*======== google fonts ========*/
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 /*======== re-useable variables ========*/
 :root {
-  --primary-font: 'Work Sans', sans-serif;
-  --primary-color: rgba(255, 144, 14, 0.1);
+  --primary-font: "Work Sans", sans-serif;
+  --bg-color: rgba(255, 144, 14, 0.1);
   --white-color: #ffffff;
   --font-dark: #131313;
   --font-darkgray: #727272;
-  --btn-bg-color: #FF900E;
-  --footer-bg-color: #FFF4E7;
-  --bg-color: #FF900E1A;
+  --btn-bg-color: #ff900e;
+  --footer-bg-color: #fff4e7;
+  --hover-color: #ff900e;
 }
 
 /*========= common css styles =========*/
@@ -43,4 +43,50 @@ body {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+}
+
+/*========= header area =========*/
+.header-area {
+  background-color: var(--bg-color);
+  padding: 10px 0;
+  height: 70px;
+  line-height: 50px;
+}
+.header-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrapper .logo {
+  flex-basis: 20%;
+}
+.header-wrapper .logo a {
+  display: block;
+  color: var(--font-dark);
+}
+.header-wrapper .logo a h1 {
+  text-transform: capitalize;
+  font-size: 1.8em;
+}
+.header-wrapper .navbar {
+  flex-basis: 70%;
+}
+.header-wrapper .navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-wrapper .navbar ul li {
+  margin-left: 30px;
+}
+.header-wrapper .navbar ul li a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: 450;
+  color: var(--font-dark);
+  transition: .5s ease;
+}
+.header-wrapper .navbar ul li a:hover {
+  color: var(--hover-color);
 }
