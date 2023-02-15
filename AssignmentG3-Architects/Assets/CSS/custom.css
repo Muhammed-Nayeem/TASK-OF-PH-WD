@@ -6,6 +6,7 @@
   --primary-font: "Work Sans", sans-serif;
   --bg-color: rgba(255, 144, 14, 0.1);
   --white-color: #ffffff;
+  --orange-color: #ff900e;
   --font-dark: #131313;
   --font-darkgray: #727272;
   --font-orange: #ff900e;
@@ -184,4 +185,98 @@ body {
   color: var(--font-darkgray);
   line-height: 25px;
   margin-bottom: 20px;
+}
+
+/*========= feature area =========*/
+.feature-area {
+  background-color: var(--white-color);
+  padding: 60px 0;
+}
+.feature-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.feature-content {
+  flex-basis: 45%;
+}
+.feature-title {
+  margin-bottom: 25px;
+}
+.feature-title h2 {
+  text-transform: capitalize;
+  font-size: 2em;
+  color: var(--font-dark);
+  line-height: 35px;
+  margin-bottom: 15px;
+  padding-left: 12px;
+  display: inline-block;
+  position: relative;
+}
+.feature-title h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--orange-color);
+}
+.feature-title h2 span {
+  display: block;
+}
+.feature-title p {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--font-darkgray);
+}
+.features {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+.feature {
+  flex-basis: 100%;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  box-shadow: 19px 19px 34px #d9d9d9,   
+              -19px -19px 34px #ffffff;
+  transition: .5s ease;
+}
+.feature:hover {
+  transform: translateY(-5px);
+}
+.feature h3 {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  color: var(--font-dark);
+  margin-bottom: 5px;
+}
+.feature p {
+  font-size: .9em;
+  color: var(--font-darkgray);
+  line-height: 1.3;
+}
+.feature-img {
+  flex-basis: 42%;
+  position: relative;
+}
+.feature-img .btn-exp {
+  display: inline-block;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 22px 25px;
+  bottom: 24px;
+  left: -85px;
+  position: absolute;
+}
+.feature-img .btn-exp span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 400;
+  margin-top: 5px;
 }
