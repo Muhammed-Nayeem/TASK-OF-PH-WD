@@ -241,9 +241,8 @@ body {
   padding: 15px 20px;
   background-color: var(--white-color);
   border-radius: 5px;
-  box-shadow: 19px 19px 34px #d9d9d9,   
-              -19px -19px 34px #ffffff;
-  transition: .5s ease;
+  box-shadow: 19px 19px 34px #d9d9d9, -19px -19px 34px #ffffff;
+  transition: 0.5s ease;
 }
 .feature:hover {
   transform: translateY(-5px);
@@ -255,7 +254,7 @@ body {
   margin-bottom: 5px;
 }
 .feature p {
-  font-size: .9em;
+  font-size: 0.9em;
   color: var(--font-darkgray);
   line-height: 1.3;
 }
@@ -279,4 +278,76 @@ body {
   font-size: 0.5em;
   font-weight: 400;
   margin-top: 5px;
+}
+
+/*========= counter area =========*/
+.counter-area {
+  padding: 70px 0;
+}
+.counter-title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.counter-title h2 {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  color: var(--font-dark);
+  position: relative;
+}
+.counter-title h2::after,
+.counter-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--orange-color);
+}
+.counter-title h2::before {
+  bottom: -6px;
+  width: 40px;
+}
+.counter-title p {
+  font-size: 1em;
+  line-height: 1.3;
+  max-width: 500px;
+}
+.counter-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.counter {
+  flex-basis: 18%;
+  border: 1px solid var(--orange-color);
+  border-radius: 3px;
+  text-align: center;
+  padding: 20px 10px;
+  transition: .5s ease;
+}
+.counter:hover {
+  background-color: var(--bg-color);
+  transform: translateY(-8px);
+}
+.counter img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+.counter h1 {
+  font-size: 2em;
+  color: var(--font-dark);
+}
+.counter h1 span {
+  display: block;
+  text-transform: capitalize;
+  font-size: 0.5em;
+  font-weight: 500;
+  margin-top: 10px;
+  color: var(--font-darkgray);
 }
