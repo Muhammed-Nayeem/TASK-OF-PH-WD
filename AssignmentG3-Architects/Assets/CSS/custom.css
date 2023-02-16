@@ -32,7 +32,7 @@ ul {
 
 img {
   width: 100%;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 body {
@@ -47,7 +47,7 @@ body {
   margin: 0 auto;
 }
 
-.btn-primary {
+.btn-primary, .btn-exp {
   display: inline-block;
   text-transform: capitalize;
   font-size: 1em;
@@ -262,16 +262,17 @@ body {
   flex-basis: 42%;
   position: relative;
 }
+.feature-img img {
+  height: 100%;
+}
 .feature-img .btn-exp {
-  display: inline-block;
-  text-transform: capitalize;
-  text-align: center;
-  font-size: 2em;
-  font-weight: 700;
-  padding: 22px 25px;
-  bottom: -8px;
-  left: -85px;
-  position: absolute;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+	padding: 20px 24px;
+	top: calc(100% - 55px);
+	left: -85px;
+	position: absolute;
 }
 .feature-img .btn-exp span {
   display: block;
