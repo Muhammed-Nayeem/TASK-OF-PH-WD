@@ -14,6 +14,7 @@ Date: 29/08/2023
 3. Features CSS
 4. Discount CSS
 5. Our Latest Collections CSS
+6. CTA (Call To Action) CSS
 ===============================================================*/
 
 /* 0. Base CSS */
@@ -283,4 +284,40 @@ body {
   width: 100%;
   border-radius: 3px;
   transition: .5s ease;
+}
+
+/* 6. CTA (Call To Action) CSS */
+.cta {
+  background-color: #ffffff;
+  padding: 40px 0 80px 0;
+}
+.cta-container {
+  /* background-image: url("../IMAGES/Latest-Deal-Flower.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 73px 0;
+}
+.cta-content {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.cta-content form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.cta-content form input[type="email"] {
+  flex: 1;
+  border: 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+.cta-content form input[type="submit"] {
+  outline: none;
 }
