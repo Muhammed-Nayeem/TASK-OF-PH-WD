@@ -11,6 +11,7 @@ Date: 29/08/2023
 0. Base CSS
 1. Section Title CSS
 2. Banner CSS
+3. Features CSS
 ===============================================================*/
 
 /* 0. Base CSS */
@@ -23,12 +24,10 @@ Date: 29/08/2023
   text-decoration: none;
   text-transform: capitalize;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -36,7 +35,6 @@ body {
   font-style: normal;
   color: #272727;
 }
-
 .btn-primary {
   background-color: #e55473;
   color: #ffffff;
@@ -48,7 +46,6 @@ body {
   cursor: pointer;
   transition: 0.5s ease;
 }
-
 .container {
   max-width: 1140px;
   width: 100%;
@@ -61,13 +58,40 @@ body {
   margin-bottom: 30px;
   padding: 20px 0;
 }
-
 .section-title h2 {
   color: #272727;
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
 }
-
+.section-title h2::before ,
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #e55473;
+  border-radius: 25px;
+}
+.section-title h2::before {
+  width: 80px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-title h2::after {
+  width: 40px;
+  bottom: -8px;
+  right: 50%;
+  transform: translateX(50%);
+}
 .section-title p {
   color: #27272799;
+  font-size: 16px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 /* 2. Banner CSS */
@@ -75,25 +99,21 @@ body {
   background: #e554731a;
   padding-top: 50px;
 }
-
 .banner-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
-
 .banner-texts {
   flex-basis: 48%;
 }
-
 .banner-texts h1 {
   font-size: 50px;
   font-weight: 900;
   color: #272727;
   text-transform: none;
 }
-
 .banner-texts p {
   font-size: 16px;
   font-weight: 400;
@@ -101,20 +121,68 @@ body {
   line-height: 1.5;
   margin: 15px 0;
 }
-
 .banner-texts button {
   margin-top: 10px;
 }
-
 .banner-texts button:hover {
   background-color: #ffffff;
   color: #e55473;
 }
-
 .banner-showcase {
   flex-basis: 40%;
 }
-
 .banner-showcase figure img {
   width: 100%;
+}
+
+/* 3. Features CSS */
+.features {
+  background-color: #ffffff;
+  padding: 90px 0;
+}
+.features-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.feature {
+  flex-basis: 28%;
+  text-align: center;
+  overflow: hidden;
+}
+.feature-showcase {
+  width: 100%;
+  height: 360px;
+  border-radius: 300px 300px 0 0;
+  padding: 50px 30px 0 30px;
+}
+.feature:nth-child(1) .feature-showcase {
+  background-color: #a7216226;
+}
+.feature:nth-child(2) .feature-showcase {
+  background-color: #0597a026;
+}
+.feature:nth-child(3) .feature-showcase {
+  background-color: #477d1126;
+}
+.feature-showcase figure {
+  width: 100%;
+  height: 100%;
+}
+.feature-showcase figure img {
+  height: 100%;
+  width: 100%;
+  padding: 15px 15px 0 15px;
+}
+.feature-text {
+  margin: 10px 0;
+  padding: 10px;
+}
+.feature-text a {
+  display: inline-block;
+  color: #272727;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 400;
 }
