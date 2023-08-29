@@ -13,6 +13,7 @@ Date: 29/08/2023
 2. Banner CSS
 3. Features CSS
 4. Discount CSS
+5. Our Latest Collections CSS
 ===============================================================*/
 
 /* 0. Base CSS */
@@ -224,6 +225,7 @@ body {
 }
 .discount-texts {
   flex-basis: 45%;
+  text-align: center;
 }
 .discount-texts h2 {
   font-size: 35px;
@@ -249,7 +251,36 @@ body {
 }
 .discount-showcase {
   flex-basis: 30%;
+  text-align: center;
 }
 .discount-showcase figure img {
   width: 100%;
+}
+
+/* 5. Our Latest Collections CSS */
+.collections {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+.collections-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.collection-flower {
+  flex-basis: 24%;
+  border: 1px solid #27272740;
+  padding: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: .5s ease;
+}
+.collection-flower:hover img {
+  transform: scale(1.3);
+}
+.collection-flower figure img {
+  width: 100%;
+  border-radius: 3px;
+  transition: .5s ease;
 }
