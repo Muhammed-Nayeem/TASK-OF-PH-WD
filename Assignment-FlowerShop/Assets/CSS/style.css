@@ -10,6 +10,7 @@ Date: 29/08/2023
 ====================
 0. Base CSS
 1. Section Title CSS
+2. Banner CSS
 ===============================================================*/
 
 /* 0. Base CSS */
@@ -41,7 +42,11 @@ body {
   color: #ffffff;
   border: 0;
   outline: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .container {
@@ -56,9 +61,60 @@ body {
   margin-bottom: 30px;
   padding: 20px 0;
 }
+
 .section-title h2 {
   color: #272727;
 }
+
 .section-title p {
   color: #27272799;
+}
+
+/* 2. Banner CSS */
+.banner {
+  background: #e554731a;
+  padding-top: 50px;
+}
+
+.banner-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-texts {
+  flex-basis: 48%;
+}
+
+.banner-texts h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #272727;
+  text-transform: none;
+}
+
+.banner-texts p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #27272799;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.banner-texts button {
+  margin-top: 10px;
+}
+
+.banner-texts button:hover {
+  background-color: #ffffff;
+  color: #e55473;
+}
+
+.banner-showcase {
+  flex-basis: 40%;
+}
+
+.banner-showcase figure img {
+  width: 100%;
 }
