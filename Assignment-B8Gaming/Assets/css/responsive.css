@@ -1,0 +1,112 @@
+/*=================================
+Theme: Gamers - Assignment Purpose
+Name: Muhammed Nayeem
+Date: 05/09/2023
+
+* Table Of Contents:
+--------------------
+1. Large Screen CSS
+2. Medium Screen CSS
+3. Mobile Screen CSS
+4. Landscape Screen CSS
+=================================*/
+
+/*------ Large devices ------*/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+/*------ Medium devices -------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 55.5%;
+  }
+  .container {
+    max-width: 750px;
+  }
+  .banner-content {
+    flex: 1 1 45rem;
+  }
+  .about-container .about-image {
+    flex: 1 1 42rem;
+  }
+  .careers-content {
+    flex: 1 1 38rem;
+  }
+}
+
+/*------ Mobile Devices -------*/
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 48%;
+  }
+  .container {
+    max-width: 320px;
+  }
+  .header-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header-container .navbar ul {
+    flex-direction: column;
+  }
+  .header-container .navbar ul li {
+    margin: 1rem 0;
+  }
+  .banner-container {
+    justify-content: center;
+  }
+  .banner-content {
+    flex: none;
+    order: 2;
+  }
+  .banner-image {
+    flex: 1 1 100%;
+    order: 1;
+  }
+  .banner-image img {
+    padding-top: 2rem;
+  }
+  .about-container {
+    justify-content: center;
+  }
+  .about-container .about-content {
+    text-align: center;
+  }
+  .streaming-container, .streaming-container-alt {
+    justify-content: center;
+    gap: 5rem;
+  }
+  .streaming-container .stream-content, .streaming-container-alt .stream-content-alt {
+    text-align: center;
+  }
+  .streaming-container .stream-image .stream-thumb, .streaming-container-alt .stream-image-alt .stream-thumb-alt {
+    width: 10rem;
+    height: 10rem;
+    bottom: -2rem;
+    left: -2.5rem;
+  }
+  .streaming-container-alt {
+    display: none;
+  }
+  .featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+  }
+  .footer-container ul li {
+    margin: 1rem 1rem;
+  }
+}
+
+/*------ Landscape devices ------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    max-width: 450px;
+  }
+}
