@@ -13,6 +13,7 @@ Date: 05/09/2023
 5. Services CSS
 6. Streaming CSS
 7. Careers CSS
+8. Featured Game CSS
 ========================================*/
 
 /*--------- 0. Base CSS ---------*/
@@ -353,6 +354,7 @@ body {
 }
 .streaming-container-alt {
   margin-top: 15rem;
+  padding-bottom: 5rem;
 }
 .streaming-container .stream-content,
 .streaming-container-alt .stream-content-alt {
@@ -443,9 +445,6 @@ body {
   color: var(--white);
   display: inline-block;
 }
-.careers-content ul li i {
-
-}
 .careers-content ul li span {
   display: inline-block;
   color: var(--white);
@@ -465,4 +464,39 @@ body {
 }
 .careers-image img {
   width: 100%;
+}
+
+/*--------- 8. Featured Game CSS ---------*/
+.featured {
+  background-color: var(--white);
+  padding: 6rem 0;
+}
+.featured-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+.featured-container .feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem .5rem;
+  cursor: pointer;
+  border-radius: 5rem;
+  transition: .5s ease;
+}
+.featured-container .feature:hover {
+  border: 1px solid var(--pink);
+}
+.featured-container .feature img {
+  width: 3.3rem;
+  height: 3.3rem;
+}
+.featured-container .feature span {
+  font-size: 1.3rem;
+  padding-left: .5rem;
+  font-weight: 500;
 }
