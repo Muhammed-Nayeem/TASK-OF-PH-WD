@@ -6,8 +6,9 @@ Date: 05/09/2023
 * Table Of Contents:
 --------------------
 0. Base CSS
-1. Header CSS
-2. Banner CSS
+1. Common CSS
+2. Header CSS
+3. Banner CSS
 ========================================*/
 
 /*--------- 0. Base CSS ---------*/
@@ -44,7 +45,21 @@ body {
   margin: 0 auto;
 }
 
-/*--------- 1. Header CSS ---------*/
+/*--------- 1. Common CSS ---------*/
+.btn-pink,
+.btn-sky-blue {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 1.1rem 2.5rem;
+  border-radius: 50px;
+  margin-top: 2.5rem;
+}
+.btn-sky-blue {
+  background-color: var(--sky-blue);
+  margin-left: 2rem;
+}
+
+/*--------- 2. Header CSS ---------*/
 .header {
   background-color: var(--white);
   padding: 1.5rem 0;
@@ -113,5 +128,74 @@ body {
   color: var(--black);
 }
 
-/*--------- 2. Banner CSS ---------*/
-
+/*--------- 3. Banner CSS ---------*/
+.banner {
+  position: relative;
+  padding: 5rem 0;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/bannerText-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 45%;
+}
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.banner-content {
+  flex: 1 1 55rem;
+}
+.banner-content span {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+.banner-content h1 {
+  font-size: 6rem;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.banner-content p {
+  font-size: 1.7rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.banner-content p i {
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+.banner-content p i.fa-play {
+  color: var(--pink);
+  border: 1px solid var(--black);
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.7rem;
+  border-radius: 50%;
+}
+.banner-content p i.fa-download {
+  color: var(--pink);
+}
+.banner-image {
+  flex: 1 1 35rem;
+}
+.banner-image img {
+  width: 100%;
+}
