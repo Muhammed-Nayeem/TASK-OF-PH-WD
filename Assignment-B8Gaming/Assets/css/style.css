@@ -9,6 +9,7 @@ Date: 05/09/2023
 1. Common CSS
 2. Header CSS
 3. Banner CSS
+4. About CSS
 ========================================*/
 
 /*--------- 0. Base CSS ---------*/
@@ -198,4 +199,52 @@ body {
 }
 .banner-image img {
   width: 100%;
+}
+
+/*--------- 4. About CSS ---------*/
+.about {
+  background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+  padding: 5rem 0;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.about-container .about-image {
+  flex: 1 1 50rem;
+}
+.about-image img {
+  width: 100%;
+}
+.about-container .about-content {
+  flex: 1 1 40rem;
+  text-align: right;
+}
+.about-content h3 {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.about-content p {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: var(--black);
+}
+.about-content cite {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.about-content cite span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
 }
