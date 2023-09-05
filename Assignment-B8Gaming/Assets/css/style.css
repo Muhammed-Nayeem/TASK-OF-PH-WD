@@ -1,0 +1,117 @@
+/*=======================================
+Theme Name: Gamers - assignment purpose.
+Author: Muhammed Nayeem.
+Date: 05/09/2023
+
+* Table Of Contents:
+--------------------
+0. Base CSS
+1. Header CSS
+2. Banner CSS
+========================================*/
+
+/*--------- 0. Base CSS ---------*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --white: #ffffff;
+  --pink: #ff42af;
+  --dark-blue: #0b0223;
+  --black: #333;
+  --sky-blue: #4ec5f7;
+  --gradient: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  --box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  --light-gray: rgba(11, 2, 35, 0.1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*--------- 1. Header CSS ---------*/
+.header {
+  background-color: var(--white);
+  padding: 1.5rem 0;
+  box-shadow: var(--box-shadow);
+}
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo a img {
+  width: 5rem;
+}
+.logo a span {
+  margin-left: 0.5rem;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.logo a span::first-letter {
+  color: var(--pink);
+}
+.header-container .navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-container .navbar ul li {
+  margin-left: 3rem;
+}
+.header-container .navbar ul li:nth-child(3) {
+  font-size: 1.2rem;
+  background-color: var(--light-gray);
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.header-container .navbar ul li span {
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: 400;
+  padding-right: 1rem;
+}
+.header-container .navbar ul li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--black);
+  font-weight: 400;
+}
+.header-container .navbar ul li a i.fa-youtube {
+  color: red;
+  font-size: 1.6rem;
+  padding-right: 0.7rem;
+}
+.header-container .navbar ul li a i.fa-tiktok {
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+/*--------- 2. Banner CSS ---------*/
+
