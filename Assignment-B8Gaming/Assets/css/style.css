@@ -12,6 +12,7 @@ Date: 05/09/2023
 4. About CSS
 5. Services CSS
 6. Streaming CSS
+7. Careers CSS
 ========================================*/
 
 /*--------- 0. Base CSS ---------*/
@@ -400,4 +401,68 @@ body {
 }
 .streaming-container-alt .stream-content-alt {
   text-align: left;
+}
+
+/*--------- 7. Careers CSS ---------*/
+.careers {
+  background-color: var(--pink);
+  padding: 5rem 0;
+}
+.careers-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.careers-content {
+  flex: 1 1 45rem;
+}
+.careers-content h3 {
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.careers-content p {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1.5;
+}
+.careers-content ul {
+  list-style: none;
+  margin: 2rem 0;
+}
+.careers-content ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+.careers-content ul li a {
+  font-size: 1.4rem;
+  color: var(--white);
+  display: inline-block;
+}
+.careers-content ul li i {
+
+}
+.careers-content ul li span {
+  display: inline-block;
+  color: var(--white);
+  font-size: 1.3rem;
+}
+.career-btn {
+  background: var(--white);
+  color: var(--pink);
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.careers-image {
+  flex: 1 1 40rem;
+}
+.careers-image img {
+  width: 100%;
 }
