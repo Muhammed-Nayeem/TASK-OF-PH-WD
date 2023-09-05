@@ -11,6 +11,7 @@ Date: 05/09/2023
 3. Banner CSS
 4. About CSS
 5. Services CSS
+6. Streaming CSS
 ========================================*/
 
 /*--------- 0. Base CSS ---------*/
@@ -334,4 +335,69 @@ body {
 }
 .service .text p {
   font-size: 1.3rem;
+}
+
+/*--------- 6. Streaming CSS ---------*/
+.streaming {
+  padding: 5rem 0;
+  background-color: var(--white);
+  position: relative;
+}
+.streaming-container,
+.streaming-container-alt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12rem;
+}
+.streaming-container-alt {
+  margin-top: 15rem;
+}
+.streaming-container .stream-content,
+.streaming-container-alt .stream-content-alt {
+  flex: 1 1 35rem;
+  text-align: right;
+}
+.stream-content h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.stream-content p {
+   font-size: 1.5rem;
+}
+.stream-content h3 span {
+  background: linear-gradient(180deg, #F948B2 50%, #8758F1 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.streaming-container .stream-image,
+.streaming-container-alt .stream-image-alt {
+  flex: 1 1 20rem;
+  position: relative;
+}
+.stream-image img,
+.streaming-container-alt .stream-image-alt img {
+  width: 100%;
+}
+.streaming-container .stream-image .stream-thumb,
+.streaming-container-alt .stream-image-alt .stream-thumb-alt {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  bottom: -4rem;
+  left: -7.5rem;
+}
+.streaming-container .stream-image .stream-thumb img,
+.streaming-container-alt .stream-image-alt .stream-thumb-alt img {
+  width: 100%;
+  height: 100%;
+}
+.streaming-container-alt .stream-image-alt .stream-thumb-alt {
+  left: 100%;
+  transform: translateX(-50%);
+}
+.streaming-container-alt .stream-content-alt {
+  text-align: left;
 }
