@@ -20,7 +20,8 @@
           extend: {
             colors: {
               'bg-primary': '#F85559',
-              'bg-footer': '#121212',
+              'bg-black': '#121212',
+              'bg-overlay': '#141414b0',
               'bg-icon': '#1212121A',
               'text-heading': '#121212',
               'text-sub-heading': '#1212121A',
@@ -69,5 +70,71 @@
       </nav>
     </header>
     <!-- header section end -->
+
+    <!-- hero section start -->
+    <section class="my-4 mx-4">
+      <div class="container mx-auto">
+        <!-- slider container -->
+        <div class="carousel w-full">
+          <!-- first slide -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./Assets/Images/banner-image/banner1.png" class="w-full" />
+            <div class="w-full h-full top-0 left-0 bg-gradient-to-b from-bg-black to-bg-overlay absolute rounded-md opacity-75 z-10"></div>
+            <div class="w-full h-full absolute flex flex-col justify-center items-center z-20">
+              <h1 class="text-white text-3xl md:text-5xl font-semibold">Exotic tastes at your<span class="block text-center mt-2">doorstep</span></h1>
+              <p class="text-white text-lg md:text-xl my-4">We supply highly quality organic products</p>
+              <button class="btn bg-bg-primary text-white border-0 hover:bg-gray-600">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-30">
+              <a href="#slide4" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❮</a> 
+              <a href="#slide2" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❯</a>
+            </div>
+          </div> 
+          <!-- second slide -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./Assets/Images/banner-image/banner2.png" class="w-full" />
+            <div class="w-full h-full top-0 left-0 bg-gradient-to-b from-bg-black to-bg-overlay absolute rounded-md opacity-75 z-10"></div>
+            <div class="w-full h-full absolute flex flex-col justify-center items-center z-20">
+              <h1 class="text-white text-3xl md:text-5xl font-semibold">Exotic tastes at your<span class="block text-center mt-2">doorstep</span></h1>
+              <p class="text-white text-lg md:text-xl my-4">We supply highly quality organic products</p>
+              <button class="btn bg-bg-primary text-white border-0 hover:bg-gray-600">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-30">
+              <a href="#slide1" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❮</a> 
+              <a href="#slide3" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❯</a>
+            </div>
+          </div> 
+          <!-- third slide -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./Assets/Images/banner-image/banner3.png" class="w-full" />
+            <div class="w-full h-full top-0 left-0 bg-gradient-to-b from-bg-black to-bg-overlay absolute rounded-md opacity-75 z-10"></div>
+            <div class="w-full h-full absolute flex flex-col justify-center items-center z-20">
+              <h1 class="text-white text-3xl md:text-5xl font-semibold">Exotic tastes at your<span class="block text-center mt-2">doorstep</span></h1>
+              <p class="text-white text-lg md:text-xl my-4">We supply highly quality organic products</p>
+              <button class="btn bg-bg-primary text-white border-0 hover:bg-gray-600">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-30">
+              <a href="#slide2" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❮</a> 
+              <a href="#slide4" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❯</a>
+            </div>
+          </div> 
+          <!-- fourth slide -->
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./Assets/Images/banner-image/banner4.png" class="w-full" />
+            <div class="w-full h-full top-0 left-0 bg-gradient-to-b from-bg-black to-bg-overlay absolute rounded-md opacity-75 z-10"></div>
+            <div class="w-full h-full absolute flex flex-col justify-center items-center z-20">
+              <h1 class="text-white text-3xl md:text-5xl font-semibold">Exotic tastes at your<span class="block text-center mt-2">doorstep</span></h1>
+              <p class="text-white text-lg md:text-xl my-4">We supply highly quality organic products</p>
+              <button class="btn bg-bg-primary text-white border-0 hover:bg-gray-600">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-30">
+              <a href="#slide3" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❮</a> 
+              <a href="#slide1" class="btn hover:bg-gray-800 btn-circle bg-gray-700 text-white border-0">❯</a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
   </body>
 </html>
