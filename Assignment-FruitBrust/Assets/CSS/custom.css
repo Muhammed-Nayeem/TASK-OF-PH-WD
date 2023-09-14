@@ -8,3 +8,36 @@
 .menu {
   right: 0;
 }
+
+h4.effect::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  height: 1px;
+  background: #868686;
+}
+
+h4.effect-2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5rem;
+  height: 1px;
+  background: #868686;
+}
+
+/*---- Responsive Line Effect Under Heading ----*/
+h4.effect-mw::before,
+h4.effect-2-mw::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 1px;
+  background: #868686;
+}
