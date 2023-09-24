@@ -17,6 +17,6 @@ function canPay(changeArray, totalDue) {
   }
 }
 
-let arr = [1,5,5];
+let arr = [1, 5, 5];
 const result = canPay(arr, 10);
 console.log(result);
