@@ -1,0 +1,87 @@
+//Task: 01
+function cubeNumber(num) {
+  if (typeof num !== "number" || num < 0) {
+    return "Please provide a valid positive number!";
+  } else {
+    return num * num * num;
+  }
+}
+
+
+
+
+//Task: 02
+function matchFinder(string1, string2) {
+  if (typeof string1 !== "string" || typeof string2 !== "string") {
+    return "Please provide a valid string for both parameter!";
+  } else {
+    if (string1.includes(string2)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+
+
+//Task: 03
+function sortMaker(arr) {
+  if (!Array.isArray(arr) || arr.length !== 2) {
+    return "Please provide a valid Array of numbers and which length is equal to Two!";
+  } else {
+    const [n1, n2] = arr;
+    if (n1 < 0 || n2 < 0) {
+      return "Invalid Input";
+    } else if (n1 > n2) {
+      return [n1, n2];
+    } else if (n2 > n1) {
+      return [n2, n1];
+    } else {
+      return "equal";
+    }
+  }
+}
+
+
+
+
+//Task: 04
+function findAddress(obj) {
+  if (typeof obj !== "object") {
+    return "Please provide a valid Object!";
+  } else {
+    let street = obj.street || "__";
+    let house = obj.house || "__";
+    let society = obj.society || "__";
+    obj = {
+      street: street,
+      house: house,
+      society: society,
+    };
+    return Object.values(obj).join(",");
+  }
+}
+
+
+
+
+//Task: 05
+function canPay(changeArray, totalDue) {
+  if (!Array.isArray(changeArray) || typeof totalDue !== "number") {
+    return "Please provide a valid Array and Number!";
+  } else if (changeArray.length === 0) {
+    return "Please don't provide an empty Array!";
+  } else {
+    let sum = 0;
+    for (let item of changeArray) {
+      sum += item;
+    }
+    if (sum >= totalDue) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
