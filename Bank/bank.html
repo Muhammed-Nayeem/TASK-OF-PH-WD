@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM-Bank | My Portal</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="py-4 bg-green-600">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="text-white">
+            <a href="#" class="text-lg font-bold">ATM-Bank</a>
+          </div>
+          <div class="text-white">
+            <div class="uppercase text-base text-black bg-white w-10  h-10 rounded-full border border-green-700 flex justify-center items-center">p</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="py-28">
+      <div class="container mx-auto">
+        <div class="flex flex-col gap-10">
+          <div class="flex justify-between items-center gap-8">
+            <div class="bg-sky-950 py-8 px-8 text-white rounded basis-1/4">
+              <h1 class="text-2xl font-semibold mb-4">Deposit Portal</h1>
+              <p class="text-4xl font-bold">$<span id="deposit">00</span></p>
+            </div>
+            <div class="bg-red-950 py-8 px-8 text-white rounded basis-1/4">
+              <h1 class="text-2xl font-semibold mb-4">Withdraw Portal</h1>
+              <p class="text-4xl font-bold">$<span id="withdraw">00</span></p>
+            </div>
+            <div class="bg-indigo-950 py-8 px-8 text-white rounded basis-1/4">
+              <h1 class="text-2xl font-semibold mb-4">Balance Portal</h1>
+              <p class="text-4xl font-bold">$<span id="balance">1200</span></p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center gap-8">
+            <div class="bg-green-500 basis-1/2 flex flex-col px-8 py-8 rounded">
+              <p class="text-2xl text-white font-bold mb-3">Deposit your money from here!</p>
+              <input type="text" name="deposit-money" id="deposit-money" class="border-0 outline-none px-4 py-2 mb-4 rounded">
+              <button id="deposit-btn" class="bg-orange-600 text-white rounded py-1">Deposit Money</button>
+            </div>
+            <div class="bg-purple-500 basis-1/2 flex flex-col px-8 py-8 rounded">
+              <p class="text-2xl text-white font-bold mb-3">Withdraw your money from here!</p>
+              <input type="text" name="withdraw-money" id="withdraw-money" class="border-0 outline-none px-4 py-2 mb-4 rounded">
+              <button id="withdraw-btn" class="bg-orange-600 text-white rounded py-1">Withdraw Money</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-5 py-4">
+      <div class="container mx-auto">
+        <div class="text-center">
+          <p class="text-base font-medium text-gray-500">&copy;2023 All right reserved ATM-Bank</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
+  </body>
+</html>
