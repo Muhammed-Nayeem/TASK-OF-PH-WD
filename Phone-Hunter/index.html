@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="bg-sky-50 py-4">
+      <div class="container mx-auto">
+        <div class="flex flex-col justify-center px-4 sm:flex-row sm:justify-between sm:items-center sm:px-0 gap-4">
+          <a href="#" class="text-lg font-bold text-gray-900 text-center sm:text-left">Hot Gadgets</a>
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main content start -->
+    <main>
+      <!-- hero start -->
+      <section class="bg-sky-50 py-16 min-h-screen">
+        <div class="container mx-auto">
+          <div class="hero">
+            <div class="hero-content text-center">
+              <div class="w-full md:max-w-xl px-4 sm:px-0">
+                <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+                <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  hero end -->
+
+      <!-- phone showcase start -->
+      <section class="py-8 -mt-80 md:-mt-96">
+        <div class="container mx-auto">
+          <div class="flex flex-col sm:flex-row items-end justify-center gap-4">
+            <div>
+              <img src="./Images/Iphone-2.png" alt="">
+            </div>
+            <div>
+              <img src="./Images/Iphone-1.png" alt="">
+            </div>
+            <div>
+              <img src="./Images/Iphone-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- phone show case end -->
+
+      <!-- phone gallery start -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto">
+          <!-- search area -->
+          <div class="mb-8 text-center">
+            <h3 class="text-4xl font-bold text-gray-900 text-center mb-8">Search Your Phone</h3>
+            <div class="border w-96 mx-auto bg-gray-200 flex justify-between rounded">
+              <input id="search-field" type="text" placeholder="search your phone" class="border-0 outline-none w-full py-2 px-2 bg-gray-200 text-black">
+              <button class="bg-blue-600 text-white px-4 cursor-pointer hover:bg-blue-700" onclick="searchHandler()">Search</button>
+            </div>
+          </div>
+          <!-- phones and show all button -->
+          <div class="py-4">
+            <!-- loading spinner -->
+            <div id="loading-spinner" class="text-center my-20 hidden">
+              <span class="loading loading-spinner text-primary loading-lg"></span>
+            </div>
+            <!-- phones container -->
+            <div id="phones-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-4 sm:px-0">
+              
+            </div>
+            <!-- modal of phone -->
+            <dialog id="phone_modal" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <div id="show-details-container">
+
+                </div>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-red-900 text-white">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <!-- show all button -->
+            <div id="show-all-btn-container" class="text-center my-10 hidden">
+              <button id="show-all" class="btn btn-primary" onclick="showAllHandler()">Show All</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- phone gallery end -->
+    </main>
+    <!-- main content end -->
+
+    <!-- footer start -->
+    <footer class="footer px-10 py-12 bg-sky-100 text-black">
+      <nav>
+        <header class="footer-title">Services</header> 
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">UI/UX Design</header> 
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Company</header> 
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Legal</header> 
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+    <!-- footer end -->
+
+    <!-- javascript file -->
+    <script src="./Javascript/app.js"></script>
+  </body>
+</html>
