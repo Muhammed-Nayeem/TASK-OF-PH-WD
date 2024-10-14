@@ -478,3 +478,33 @@ a {
   font-size: 15px;
   font-weight: 600;
 }
+
+/*-------- Footer CSS --------*/
+#footer {
+  background: rgba(13, 19, 33, 0.03);
+  margin-top: 40px;
+  padding: 10px 0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copyright p {
+  font-size: 16px;
+  color: #0D1321;
+  font-weight: 600;
+}
+.footer-social {
+  list-style: none;
+  display: flex;
+  column-gap: 15px;
+}
+.footer-social li a {
+  display: inline-block;
+}
+.footer-social li a img {
+  width: 30px;
+  height: 30px;
+}
