@@ -284,7 +284,7 @@ a {
   text-align: center;
   margin-bottom: 40px;
 }
-.current-focus-header .current-focus-title {
+.current-focus-title {
   font-size: 30px;
   color: #0D1321;
   margin-bottom: 10px;
@@ -334,4 +334,67 @@ a {
   color: rgb(13, 19, 33);
   line-height: 1.5;
   margin-bottom: 12px;
+}
+
+/*-------- Future Focus CSS --------*/
+.future-focus {
+  padding: 0 0 90px 0;
+}
+.future-focus-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.future-focus-title {
+  font-size: 30px;
+  color: #0D1321;
+  margin-bottom: 10px;
+}
+.future-focus-subtitle {
+  color: rgb(13, 19, 33);
+  font-size: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.future-focus-container{
+  max-width: 948px;
+  width: 100%;
+  margin: 0 auto;
+}
+.single-future {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #a5a5a5;
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+.single-future-img {
+  flex-basis: 10%;
+}
+.single-future-img img {
+  width: 100%;
+  height: 100%;
+}
+.single-future-text {
+  flex-basis: 85%;
+}
+.single-future-text h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0D1321;
+  margin-bottom: 10px;
+}
+.single-future-text p {
+  font-size: 15px;
+  color: rgb(13, 19, 33);
+  line-height: 1.5;
+  opacity: .8;
+  margin-bottom: 10px;
+}
+.single-future-text .btn {
+  border: 0;
+  text-decoration: underline;
 }
