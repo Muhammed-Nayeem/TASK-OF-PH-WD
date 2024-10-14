@@ -51,11 +51,11 @@ a {
 /*-------- Common CSS --------*/
 .btn {
   border: 1px solid #0d1321;
-  display: block;
-  padding: 5px 10px;
+  display: inline-block;
+  padding: 8px 10px;
   border-radius: 5px;
   color: #0d1321;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
 }
@@ -87,4 +87,72 @@ a {
   font-size: 24px;
   font-weight: 800;
   color: #0d1321;
+}
+
+/*-------- Banner CSS --------*/
+.banner {
+  background-image: url("../Images/Hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.banner::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:  rgb(211, 223, 252);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 620px;
+}
+
+.banner__user-img {
+  height: 240px;
+  width: 240px;
+  margin-bottom: 32px;
+}
+.banner-text {
+  text-align: center;
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0d1321;
+}
+
+.banner-text p {
+  color: rgb(13, 19, 33);
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.banner-text .primary-btn {
+  padding: 10px 12px;
+  font-size: 12px;
+  margin: 0 auto;
 }
