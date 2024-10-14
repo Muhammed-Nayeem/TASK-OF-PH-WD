@@ -43,3 +43,48 @@ body {
   font-size: var(--primary-size);
   font-weight: var(--primary-weight);
 }
+
+a {
+  text-decoration: none;
+}
+
+/*-------- Common CSS --------*/
+.btn {
+  border: 1px solid #0d1321;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #0d1321;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.primary-btn {
+  background-color: #0d1321;
+  color: #ffffff;
+  border: 0;
+}
+
+/*-------- Header CSS --------*/
+.header {
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.header-content .logo {
+  display: block;
+}
+
+.header-content .logo h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d1321;
+}
