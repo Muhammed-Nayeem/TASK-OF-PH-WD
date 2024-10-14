@@ -10,8 +10,8 @@ Date: 10 Oct, 2024.
 2. Header CSS
 3. Banner CSS
 4. About CSS
-5. Services CSS
-6. Streaming CSS
+5. Videos CSS
+6. Current Focus CSS
 7. Careers CSS
 8. Featured Game CSS
 9. Footer CSS
@@ -274,4 +274,64 @@ a {
  width: 100%;
  height: 100%;
  border-radius: 10px;
+}
+
+/*-------- Current Focus CSS --------*/
+.current-focus {
+  padding: 0 0 90px 0;
+}
+.current-focus-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.current-focus-header .current-focus-title {
+  font-size: 30px;
+  color: #0D1321;
+  margin-bottom: 10px;
+}
+.current-focus-subtitle {
+  color: rgb(13, 19, 33);
+  font-size: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.current-focus-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.single-container {
+  flex-basis: 30%;
+  text-align: left;
+  padding: 20px;
+  border-radius: 16px;
+}
+.single-container:nth-child(1) {
+  background-color: rgba(255, 76, 30, 0.05);
+}
+.single-container:nth-child(2) {
+  background: rgba(0, 76, 232, 0.05);
+}
+.single-container:nth-child(3) {
+  background: rgba(255, 223, 0, 0.05);
+}
+.single-container img {
+  width: 50px;
+  height: 50px;
+}
+.single-container .texts {
+  margin-top: 15px;
+}
+.single-container .texts h3 {
+  font-size: 16px;
+  color: #0D1321;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.single-container .texts p {
+  font-size: 15px;
+  color: rgb(13, 19, 33);
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
