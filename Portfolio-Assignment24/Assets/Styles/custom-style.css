@@ -1,0 +1,45 @@
+/*==============================================
+Theme Name: Portfolio Page - Assignment Purpose.
+Author: Muhammed Nayeem.
+Date: 10 Oct, 2024.
+
+* Table Of Contents:
+--------------------
+0. Base CSS
+1. Common CSS
+2. Header CSS
+3. Banner CSS
+4. About CSS
+5. Services CSS
+6. Streaming CSS
+7. Careers CSS
+8. Featured Game CSS
+9. Footer CSS
+===============================================*/
+
+/*-------- Base CSS --------*/
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Azeret Mono", monospace;
+  --primary-size: 16px;
+  --primary-weight: 400;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--primary-size);
+  font-weight: var(--primary-weight);
+}
