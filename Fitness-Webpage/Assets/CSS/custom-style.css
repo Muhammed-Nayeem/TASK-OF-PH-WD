@@ -7,7 +7,7 @@ Date: 21 Oct, 2024.
 --------------------
 0. Base CSS
 1. Common CSS
-2. 
+2. Header CSS
 3. 
 4. 
 5. 
@@ -16,3 +16,87 @@ Date: 21 Oct, 2024.
 8. 
 9. 
 =================================================*/
+
+/*--------- 0.Base CSS ---------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary-font: "Inter", sans-serif;
+  --white: #ffffff;
+  --deem-white: rgba(255, 255, 255, 0.5);
+  --orange: #E6533C;
+  --dark-gray: #222222;
+  --light-dark: rgba(255, 255, 255, 0.1);
+  --dark: rgb(17, 17, 17);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/*--------- 1.Common CSS ---------*/
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.section-header {}
+.section-header .section-title {}
+.section-header .section-subtitle {}
+
+/*--------- 2.Header CSS ---------*/
+.header {
+  background-color: var(--dark);
+  padding: 20px 0;
+}
+.header-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  display: inline-block;
+  color: var(--orange);
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+}
+.navigation-menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  border: 1px solid var(--light-dark);
+  padding: 2px 2px;
+  border-radius: 50px;
+}
+.navigation-menu ul li a {
+  display: inline-block;
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 15px;
+  transition: 0.5s ease-in;
+}
+.navigation-menu ul li a:hover {
+  background-color: var(--orange);
+}
+.navigation-menu ul li a.active {
+  background-color: var(--orange);
+}
