@@ -13,8 +13,8 @@ Date: 21 Oct, 2024.
 5. Run Miles CSS
 6. BMI Calculator CSS
 7. Team CSS
-8. 
-9. 
+8. Unique Section CSS
+9. Footer CSS
 =================================================*/
 
 /*--------- 0.Base CSS ---------*/
@@ -464,3 +464,18 @@ body {
   color: var(--deem-white);
   margin-top: 5px;
 }
+
+/*--------- 8.Unique Section CSS ---------*/
+
+/*--------- 9.Footer CSS ---------*/
+.footer {}
+.footer-container {}
+.single-footer {}
+.single-footer a {}
+.single-footer p {}
+.single-footer h3 {}
+.single-footer ul {}
+.single-footer ul li {}
+.single-footer ul li a {}
+.copyright-text {}
+.copyright-text p {}
