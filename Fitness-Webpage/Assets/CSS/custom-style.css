@@ -8,7 +8,7 @@ Date: 21 Oct, 2024.
 0. Base CSS
 1. Common CSS
 2. Header CSS
-3. 
+3. Banner CSS
 4. 
 5. 
 6. 
@@ -18,13 +18,17 @@ Date: 21 Oct, 2024.
 =================================================*/
 
 /*--------- 0.Base CSS ---------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/miama");
 
 :root {
   --primary-font: "Inter", sans-serif;
+  --secondary-font: "Miama", sans-serif;
   --white: #ffffff;
   --deem-white: rgba(255, 255, 255, 0.5);
-  --orange: #E6533C;
+  --glass-white1: rgba(48, 48, 48, 0.54);
+  --glass-white2: rgba(225, 225, 225, 0.1);
+  --orange: #e6533c;
   --dark-gray: #222222;
   --light-dark: rgba(255, 255, 255, 0.1);
   --dark: rgb(17, 17, 17);
@@ -56,9 +60,29 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-.section-header {}
-.section-header .section-title {}
-.section-header .section-subtitle {}
+.section-header {
+}
+.section-header .section-title {
+}
+.section-header .section-subtitle {
+}
+.btn {
+  outline: none;
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: var(--orange);
+  border: 0;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
 
 /*--------- 2.Header CSS ---------*/
 .header {
@@ -99,4 +123,114 @@ body {
 }
 .navigation-menu ul li a.active {
   background-color: var(--orange);
+}
+
+/*--------- 3.Banner CSS ---------*/
+.banner {
+  background: linear-gradient(180deg,
+    rgb(17, 17, 17),
+    rgba(70, 70, 70, 0.9) 100%);
+}
+.banner-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+.banner-content-texts {
+  flex-basis: 50%;
+}
+.banner-content-texts h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.banner-content-texts h1 span {
+  font-family: var(--secondary-font);
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 4rem;
+}
+.banner-content-texts p {
+  font-size: 1rem;
+  color: var(--deem-white);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+.banner-content-texts .btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.banner-content-img {
+  flex-basis: 30%;
+  padding: 30px 30px 0 30px;
+}
+.banner-side-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.banner-side-img img {
+  width: 100%;
+  height: 100%;
+}
+.video-tutorials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 4rem;
+  left: -4rem;
+  background-color: var(--glass-white1);
+  padding: 8px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+.video-tutorials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.video-tutorials a i {
+  font-size: 10px;
+  color: var(--white);
+}
+.video-tutorials h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--white);
+}
+.video-tutorials h3 span {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 2px;
+  color: var(--deem-white);
+}
+.workout-videos {
+  position: absolute;
+  top: 4rem;
+  right: -2rem;
+  background-color: var(--glass-white2);
+  padding: 8px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+.workout-videos h3 {
+  font-size: 1.4rem;
+  color: var(--white);
+}
+.workout-videos h3 span {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 2px;
+  color: var(--deem-white);
 }
