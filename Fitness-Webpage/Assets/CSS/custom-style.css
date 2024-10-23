@@ -11,10 +11,11 @@ Date: 21 Oct, 2024.
 3. Banner CSS
 4. Habit CSS
 5. Run Miles CSS
-6. BMI Calculator CSS
-7. Team CSS
-8. Price CSS
-9. Footer CSS
+6. Training CSS
+7. BMI Calculator CSS
+8. Team CSS
+9. Price CSS
+10. Footer CSS
 =================================================*/
 
 /*--------- 0.Base CSS ---------*/
@@ -317,7 +318,9 @@ body {
   height: 100%;
 }
 
-/*--------- 6.BMI Calculator CSS ---------*/
+/*------- 6.Training CSS -------*/
+
+/*--------- 7.BMI Calculator CSS ---------*/
 .bmi-calculator {
   background-color: var(--dark);
   padding: 80px 0;
@@ -328,7 +331,6 @@ body {
 .bmi-top .section-header {
   text-align: left;
 }
-.bmi-top .section-header .section-title {}
 .bmi-top .section-header .section-subtitle {
   margin: 0;
 }
@@ -415,7 +417,7 @@ body {
 .bmi-calc-form form .inputs select.last-select {
   flex-basis: 100%;
 }
-/*--------- 7.Team CSS ---------*/
+/*--------- 8.Team CSS ---------*/
 .team {
   background-color: var(--dark);
   padding: 20px 0 60px 0;
@@ -465,7 +467,7 @@ body {
   margin-top: 5px;
 }
 
-/*--------- 8.Price CSS ---------*/
+/*--------- 9.Price CSS ---------*/
 .prices {
   background-color: var(--dark);
   padding: 20px 0 80px 0;
@@ -491,7 +493,7 @@ body {
   content: "";
   top: 0;
   left: 0;
-  width: 2%;
+  width: 1%;
   height: 100%;
   background-color: var(--dark-gray);
   border-radius: 10px;
@@ -558,7 +560,7 @@ body {
   border-bottom: 0;
 }
 
-/*--------- 9.Footer CSS ---------*/
+/*--------- 10.Footer CSS ---------*/
 .footer {
   padding: 60px 0 25px 0;
   background-color: var(--dark-gray);
