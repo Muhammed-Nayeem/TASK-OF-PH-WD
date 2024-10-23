@@ -13,7 +13,7 @@ Date: 21 Oct, 2024.
 5. Run Miles CSS
 6. BMI Calculator CSS
 7. Team CSS
-8. Unique Section CSS
+8. Price CSS
 9. Footer CSS
 =================================================*/
 
@@ -418,7 +418,7 @@ body {
 /*--------- 7.Team CSS ---------*/
 .team {
   background-color: var(--dark);
-  padding: 50px 0;
+  padding: 20px 0 60px 0;
 }
 .team-container {
   background-color: var(--dark-gray);
@@ -465,7 +465,98 @@ body {
   margin-top: 5px;
 }
 
-/*--------- 8.Unique Section CSS ---------*/
+/*--------- 8.Price CSS ---------*/
+.prices {
+  background-color: var(--dark);
+  padding: 20px 0 80px 0;
+}
+.prices-container {
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+}
+.price {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+.price::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 2%;
+  height: 100%;
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  transition: width 0.5s ease-in;
+  z-index: -1;
+}
+.price:hover::before {
+  width: 100%;
+}
+.price-icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.5s ease-in;
+}
+.price:hover .price-icon {
+  background-color: var(--orange);
+}
+.price-icon i {
+    font-size: 1.5rem;
+    transition: 0.5s ease-in;
+}
+.price:hover .price-icon i {
+  transform: rotate(360deg);
+}
+.price-text h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.price-tag {
+    margin: 12px 0;
+    background-color: var(--dark-gray);
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    transition: background 0.5s ease-in;
+}
+.price:hover .price-tag {
+  background-color: var(--orange);
+}
+.price-tag h4 {
+    font-size: 13px;
+    font-weight: 600;
+}
+.price-tag h4 span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0 5px;
+}
+.price-text ul li {
+    font-size: 15px;
+    border-bottom: 1px solid var(--deem-white);
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+}
+.price-text ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
 
 /*--------- 9.Footer CSS ---------*/
 .footer {
