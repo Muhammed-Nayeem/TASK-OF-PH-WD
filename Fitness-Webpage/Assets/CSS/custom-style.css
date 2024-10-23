@@ -468,14 +468,53 @@ body {
 /*--------- 8.Unique Section CSS ---------*/
 
 /*--------- 9.Footer CSS ---------*/
-.footer {}
-.footer-container {}
-.single-footer {}
-.single-footer a {}
-.single-footer p {}
-.single-footer h3 {}
-.single-footer ul {}
-.single-footer ul li {}
-.single-footer ul li a {}
-.copyright-text {}
-.copyright-text p {}
+.footer {
+  padding: 60px 0 25px 0;
+  background-color: var(--dark-gray);
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 80px;
+}
+.single-footer a {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.single-footer p {
+    color: var(--deem-white);
+    line-height: 1.4;
+    font-style: normal;
+    font-weight: 400;
+}
+.single-footer h3 {
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+.single-footer ul {
+    list-style: none;
+}
+.single-footer ul li a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--deem-white);
+    font-style: normal;
+    margin-bottom: 8px;
+}
+.copyright-text {
+    border-top: 1px solid var(--light-dark);
+    padding-top: 20px;
+    margin-top: 45px;
+    text-align: center;
+}
+.copyright-text p {
+    font-size: 1rem;
+    color: var(--deem-white);
+    letter-spacing: 1px;
+}
