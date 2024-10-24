@@ -1,0 +1,48 @@
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 95%;
+  }
+  .navigation-menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .banner {
+    padding: 50px 0;
+  }
+  .banner-contents {
+    flex-direction: column;
+  }
+  .banner-content-texts,
+  .banner-content-img,
+  .bmi-bottom-container .bmi-calc-chart,
+  .bmi-bottom-container .bmi-calc {
+    flex-basis: 100%;
+  }
+  .video-tutorials {
+    left: -2rem;
+  }
+  .habits-container,
+  .run-miles-container,
+  .bmi-bottom-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .run-miles-container .section-header .btn-primary,
+  .section-header .section-subtitle {
+    width: 100%;
+  }
+  .team-container {
+    grid-template-columns: auto;
+  }
+  .prices-container {
+    grid-template-columns: auto;
+    gap: 2rem;
+  }
+  .footer-container {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+}

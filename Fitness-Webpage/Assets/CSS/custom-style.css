@@ -395,6 +395,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .bmi-calc-form .bmi-form-control input,
 .bmi-calc-form .bmi-form-control select {
