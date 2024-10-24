@@ -134,6 +134,13 @@ body {
 .navigation-menu ul li a.active {
   background-color: var(--orange);
 }
+.hamburger-menu {
+  display: none;
+}
+.hamburger-menu i {
+  color: var(--white);
+  font-size: 1.2rem;
+}
 
 /*--------- 3.Banner CSS ---------*/
 .banner {
@@ -339,10 +346,10 @@ body {
   padding: 3rem 0;
 }
 .bmi-bottom-container {
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10%;
 }
 .bmi-bottom-container .bmi-calc-chart {
   flex-basis: 30%;
@@ -381,41 +388,31 @@ body {
 .bmi-bottom-container .bim-calc {
   flex-basis: 50%;
 }
-.bmi-calc-form {
-  width: 100%;
-}
-.bmi-calc-form form {
-  width: 100%;
-}
 .bmi-calc-form form .inputs {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 .bmi-calc-form form .inputs input[type="text"] {
-  flex-basis: 49%;
+  display: inline-block;
   padding: 12px 15px;
   outline: none;
   border-radius: 8px;
   border: none;
   background-color: var(--light-dark);
+  flex: 1 0 0;
 }
 .bmi-calc-form form .inputs input[type="text"]::placeholder {
   color: var(--deem-white);
 }
 .bmi-calc-form form .inputs select {
-  flex-basis: 49%;
+  flex: 1 0 0;
   padding: 12px 15px;
   outline: none;
   border-radius: 8px;
   border: none;
   background-color: var(--light-dark);
   color: var(--deem-white);
-}
-.bmi-calc-form form .inputs select.last-select {
-  flex-basis: 100%;
 }
 /*--------- 8.Team CSS ---------*/
 .team {
