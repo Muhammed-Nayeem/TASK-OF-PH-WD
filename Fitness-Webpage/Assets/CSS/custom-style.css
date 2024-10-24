@@ -349,7 +349,7 @@ body {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 10%;
 }
 .bmi-bottom-container .bmi-calc-chart {
   flex-basis: 30%;
@@ -385,33 +385,34 @@ body {
 .bmi-chart-table td {
   color: var(--deem-white);
 }
-.bmi-bottom-container .bim-calc {
-  flex-basis: 50%;
+.bmi-bottom-container .bmi-calc-form {
+  width: 100%;
 }
-.bmi-calc-form form .inputs {
+.bmi-bottom-container .bmi-calc {
+  flex-basis: 60%;
+}
+.bmi-calc-form .bmi-form-control {
+  width: 100%;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  justify-content: space-between;
 }
-.bmi-calc-form form .inputs input[type="text"] {
-  display: inline-block;
+.bmi-calc-form .bmi-form-control input,
+.bmi-calc-form .bmi-form-control select {
   padding: 12px 15px;
   outline: none;
   border-radius: 8px;
   border: none;
   background-color: var(--light-dark);
-  flex: 1 0 0;
+  width: 48%;
 }
-.bmi-calc-form form .inputs input[type="text"]::placeholder {
+.bmi-calc-form .bmi-form-control .last-select {
+  width: 100%;
+}
+.bmi-calc-form .bmi-form-control select {
+  background-color: var(--light-dark);
   color: var(--deem-white);
 }
-.bmi-calc-form form .inputs select {
-  flex: 1 0 0;
-  padding: 12px 15px;
-  outline: none;
-  border-radius: 8px;
-  border: none;
-  background-color: var(--light-dark);
+.bmi-calc-form form .inputs input[type="text"]::placeholder {
   color: var(--deem-white);
 }
 /*--------- 8.Team CSS ---------*/
