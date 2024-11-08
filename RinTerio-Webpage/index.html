@@ -22,7 +22,9 @@
           theme: {
               extend: {
                   colors: {
-                      logoColor: "#ABEF5F",
+                    accentColor: "#ABEF5F",
+                    accentLight: "rgba(171, 239, 95, 0.5)",
+                    subtitleColor: "rgb(73, 73, 73)",
                   },
               },
           },
@@ -36,7 +38,7 @@
         <div class="navbar">
           <div class="navbar-start">
             <a href="#" class="text-xl">
-              <i class="fa-solid fa-arrow-right -rotate-45 bg-logoColor p-1 rounded-full"></i>
+              <i class="fa-solid fa-arrow-right -rotate-45 bg-accentColor p-1 rounded-full"></i>
               <span class="font-bold text-black">Rinterio</span>
             </a>
           </div>
@@ -53,7 +55,7 @@
             <div class="hidden md:block">
               <button class="bg-white p-1 h-8 w-8 rounded-full"><i class="text-sm fa-solid fa-magnifying-glass"></i></button>
               <button class="bg-white p-1 h-8 w-8 rounded-full"><i class="text-sm fa-solid fa-cart-shopping"></i></button>
-              <button class="bg-logoColor text-black font-semibold px-2 py-2 text-sm rounded-full">Book Consult <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-1 rounded-full"></i></button>
+              <button class="bg-accentColor text-black font-semibold px-2 py-2 text-sm rounded-full">Book Consult <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-1 rounded-full"></i></button>
             </div>
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -71,5 +73,26 @@
         </div>
       </nav>
     </header>
+
+    <!-- main content goes here -->
+    <main>
+      <!-- banner area start -->
+      <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-4 md:px-0">
+          <div class="flex flex-col justify-center items-center gap-10">
+            <div class="text-center">
+              <figure>
+                <img src="./Assets/Images/banner.png" alt="House">
+              </figure>
+            </div>
+            <div class="text-center">
+              <h1 class="text-black text-3xl md:text-5xl font-extrabold mb-6">A barn house of this design has a<br>striking appearance</h1>
+              <p class="max-w-[950px] leading-[24px] mb-6 text-subtitleColor">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+              <button class="bg-accentLight text-black font-semibold px-5 py-2 text-sm rounded-full">View Details <i class="fa-solid fa-arrow-right -rotate-45 bg-accentColor text-black p-1 rounded-full"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
