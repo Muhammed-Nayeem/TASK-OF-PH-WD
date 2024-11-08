@@ -32,6 +32,9 @@
                     boxThree: "rgb(164, 218, 195)",
                     boxFour: "rgb(119, 170, 234)",
                   },
+                  backgroundImage: {
+                    contactBG: "url('./Assets/Images/contact-bg.jpg')",
+                  },
               },
           },
       }
@@ -376,6 +379,33 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact area start -->
+      <section class="py-20 bg-contactBG bg-cover bg-no-repeat mt-1">
+        <div class="container mx-auto px-4 md:px-0">
+          <div class="text-center mb-10">
+            <span class="bg-accentLight2 px-4 py-2 rounded-full font-semibold"><i class="fa-solid fa-arrow-right"></i> Let's Connect</span>
+            <h2 class="text-3xl text-titleColor font-extrabold my-4">Let’s Discuss Next Project</h2>
+            <p class="text-subtitleColor max-w-[850px] mx-auto">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+          </div>
+          <div class="w-3/4 mx-auto">
+            <form action="#">
+              <div class="flex flex-col md:flex-row gap-5 mb-5">
+                <input class="flex-1 px-5 py-3 outline-none rounded-full" type="text" name="first-name" id="first-name" placeholder="First Name*">
+                <input class="flex-1 px-5 py-3 outline-none rounded-full" type="text" name="last-name" id="last-name" placeholder="Last Name*">
+              </div>
+              <div class="flex flex-col md:flex-row gap-5 mb-5">
+                <input class="flex-1 px-5 py-3 outline-none rounded-full" type="text" name="phone-number" id="phone-number" placeholder="Phone Number*">
+                <input class="flex-1 px-5 py-3 outline-none rounded-full" type="text" name="Email" id="Email" placeholder="Email Number*">
+              </div>
+              <div class="flex flex-col">
+                <textarea name="message" id="message" placeholder="Write your message here" rows="5" class="rounded-xl outline-none px-5 py-3"></textarea>
+                <button type="submit" class="text-base font-bold text-black bg-accentColor py-2 rounded-full mt-5 flex flex-row gap-1 items-center justify-center">Send Main <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white text-base h-[25px] w-[25px] rounded-full"></i></a></button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
