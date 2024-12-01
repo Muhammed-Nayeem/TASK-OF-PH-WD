@@ -1,0 +1,12 @@
+function calculateTax(income, expenses) {
+  let restIncome = 0;
+  let incomeTax = 0;
+
+  if (income >= 0 && expenses >= 0 && income >= expenses) {
+    restIncome = income - expenses;
+    incomeTax = (restIncome * 20) / 100; // restIncome * 0.20;
+    return incomeTax;
+  } else {
+    return "Invalid Input";
+  }
+}
