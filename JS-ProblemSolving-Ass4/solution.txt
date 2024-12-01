@@ -4,7 +4,7 @@ function calculateTax(income, expenses) {
 
   if (income >= 0 && expenses >= 0 && income >= expenses) {
     restIncome = income - expenses;
-    incomeTax = (restIncome * 20) / 100; // restIncome * 0.20;
+    incomeTax = (restIncome * 20) / 100;
     return incomeTax;
   } else {
     return "Invalid Input";
