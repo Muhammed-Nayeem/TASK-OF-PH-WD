@@ -10,3 +10,19 @@ function calculateTax(income, expenses) {
     return "Invalid Input";
   }
 }
+
+
+function sendNotification(email) {
+  let user_name = "";
+  let domain_name = "";
+  let notification_message = "";
+
+  if (typeof email === "string" && email.charAt(email.indexOf("@")) === "@") {
+    user_name = email.split("@")[0];
+    domain_name = email.split("@")[1];
+    notification_message = `${user_name} sent you an email from ${domain_name}`;
+    return notification_message;
+  } else {
+    return "Invalid Email";
+  }
+}
