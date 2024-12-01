@@ -1,5 +1,5 @@
 /**
- * ?Problem 2: Write a function called sendNotification(email) which will take a string parameter of any email and return the alert notification;
+ * ?Problem 2: Write a function called sendNotification(email) which will take a string parameter of any email and return the alert notification by using email user-name and domain-name;
  * !Condition: 1) Input should be string, 2) Input should be an email;
  */
 
