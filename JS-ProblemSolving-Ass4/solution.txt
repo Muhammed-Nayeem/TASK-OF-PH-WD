@@ -41,3 +41,35 @@ function checkDigitsInName(name) {
     return "Invalid Input";
   }
 }
+
+
+function calculateFinalScore(obj) {
+  let total_score = 0;
+
+  if (typeof obj === "object" && !Array.isArray(obj) && obj !== null) {
+    if (
+      typeof obj.name === "string" &&
+      typeof obj.testScore === "number" &&
+      typeof obj.schoolGrade === "number" &&
+      typeof obj.isFFamily === "boolean"
+    ) {
+      if (obj.testScore <= 50 && obj.schoolGrade <= 30) {
+        total_score =
+          obj.isFFamily === true
+            ? obj.testScore + obj.schoolGrade + 20
+            : obj.testScore + obj.schoolGrade + 0;
+        if (total_score >= 80) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return "Invalid Input";
+      }
+    } else {
+      return "Invalid Input";
+    }
+  } else {
+    return "Invalid Input";
+  }
+}
