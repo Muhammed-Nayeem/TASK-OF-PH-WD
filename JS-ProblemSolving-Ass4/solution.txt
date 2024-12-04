@@ -73,3 +73,24 @@ function calculateFinalScore(obj) {
     return "Invalid Input";
   }
 }
+
+
+function waitingTime(waitingTimes , serialNumber) {
+  let sumOf_times = 0;
+  let averageOf_times = 0;
+  let waited_persons = 0;
+  let waiting_times = 0;
+
+  if (Array.isArray(waitingTimes) && typeof serialNumber === "number" && serialNumber > waitingTimes.length) {
+    for (let i = 0; i < waitingTimes.length; i++) {
+      sumOf_times += waitingTimes[i];
+    }
+    averageOf_times = sumOf_times / waitingTimes.length;
+    waited_persons = serialNumber - 1 - waitingTimes.length;
+    waiting_times = Math.round(averageOf_times) * waited_persons;
+    return waiting_times;
+  } else {
+    return "Invalid Input";
+  }
+}
+
