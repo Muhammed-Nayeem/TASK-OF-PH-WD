@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate-Bangladesh</title>
+  <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            header_bg: 'rgb(249, 247, 243)',
+            blog_btn_bg: 'rgb(180, 244, 97)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- header start -->
+  <header class="bg-header_bg">
+    <div class="container mx-auto">
+      <div class="navbar justify-between">
+        <div class="navbar-start w-[auto]">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="inline-block md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a class="inline-block bg-blog_btn_bg px-6 py-1 rounded text-lg font-medium text-black" href="../../index.html">Home</a></li>
+            </ul>
+          </div>
+          <div class="hidden md:inline-block">
+            <a class="inline-block bg-blog_btn_bg px-6 py-1 rounded text-lg font-medium text-black" href="../../index.html">Home</a>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="text-xl flex items-center gap-2 font-bold" href="../../index.html">
+            <img class="h-8 w-8" src="../Images/logo.png" alt="logo">
+            Donate Bangladesh
+          </a>
+        </div>
+        <div class="navbar-end w-[auto]">
+          <div class="flex items-center gap-2">
+            <img class="h-6 w-6" src="../Images/coin.png" alt="coin">
+            <h4 class="text-gray-500 font-medium text-lg"><span id="total_balance">5500</span> BDT</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- FAQ section start -->
+  <section class="bg-slate-100 h-screen">
+    <div class="container mx-auto">
+      <div class="flex flex-col items-center justify-center h-screen">
+        <article class="mb-8 text-center">
+          <h2 class="text-black text-3xl font-bold">Here the simple FAQ?</h2>
+        </article>
+        <!-- accordion -->
+        <div class="collapse collapse-arrow bg-white border rounded mb-4">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">A. What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of the document as a tree of objects, allowing you to manipulate its content and visual presentation. Each object represents a part of the document, such as an element or attribute.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border rounded mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">B. How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p>
+              JavaScript provides several methods to select DOM elements. Here are some of them:
+              <br>
+              <p class="font-semibold">Using getElementById</p>
+              <p class="font-semibold">Using getElementsByClassName</p>
+              <p class="font-semibold">Using getElementsByTagName</p>
+              <p class="font-semibold">Using querySelector</p>
+              <p class="font-semibold">Using querySelectorAll</p>
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border rounded mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">C. What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p>
+              Event delegation in the DOM is a technique that involves attaching a single event listener to a parent element instead of attaching multiple listeners to each child element. This technique is useful because it allows you to handle events at a higher level in the DOM, and it's especially useful when you have many elements or when elements are dynamically added or removed.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border rounded mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">D. How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p>
+              Manipulating HTML Elements with JavaScript:
+              <br>
+              <p>1. Using the element's ID: We can assign an ID to an HTML element and use document. getElementById() to access it.</p>
+              <p>2.Using the element's class name: We can assign a class name to an HTML element and use document. ...</p>
+              <p>3. Using the element's tag name: We can use document.</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ section end -->
+
+  <!-- footer start -->
+  <footer class="bg-slate-900 py-6">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <p class="text-white text-base">All right reserved Donate Bangladesh || Copyright@2025</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+</body>
+</html>
