@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate-Bangladesh</title>
+  <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            header_bg: 'rgb(249, 247, 243)',
+            blog_btn_bg: 'rgb(180, 244, 97)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- header start -->
+  <header class="bg-header_bg">
+    <div class="container mx-auto px-4 sm:px-0">
+      <div class="navbar">
+        <div class="navbar-start">
+          <div>
+            <a class="inline-block bg-blog_btn_bg px-6 py-1 rounded text-lg font-medium text-black" href="./HTML/blog.html">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="text-xl flex items-center gap-2 font-bold" href="index.html">
+            <img class="h-8 w-8" src="./Images/logo.png" alt="logo">
+            Donate Bangladesh
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="flex items-center gap-2">
+            <img class="h-6 w-6" src="./Images/coin.png" alt="coin">
+            <h4 class="text-gray-500 font-medium text-lg"><span id="total_balance">5500</span> BDT</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+</body>
+</html>
