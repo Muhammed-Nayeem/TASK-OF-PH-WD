@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="./Assets/Images/logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./Assets/CSS/custom.css">
   <script>
     tailwind.config = {
       theme: {
@@ -22,7 +23,7 @@
 </head>
 <body>
   <!-- header start -->
-  <header class="bg-header_bg">
+  <header class="bg-header_bg sticky top-0 w-full">
     <div class="container mx-auto">
       <div class="navbar justify-between">
         <div class="navbar-start w-[auto]">
@@ -67,5 +68,16 @@
     </div>
   </header>
   <!-- header end -->
+
+  <!-- banner start -->
+  <section class="bg-gray-50 py-20 sticky top-14">
+    <div class="container mx-auto">
+      <div class="flex justify-center items-center gap-4">
+        <button class="text-black font-medium text-base border rounded px-8 py-3 btn-active" id="dontation_btn">Donation</button>
+        <button class="text-black font-medium text-base border rounded px-8 py-3" id="history_btn">History</button>
+      </div>
+    </div>
+  </section>
+  <!-- banner end -->
 </body>
 </html>
