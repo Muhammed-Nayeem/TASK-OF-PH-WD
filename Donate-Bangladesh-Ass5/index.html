@@ -73,7 +73,7 @@
   <section class="bg-gray-50 py-20 sticky top-14 z-10">
     <div class="container mx-auto">
       <div class="flex justify-center items-center gap-4">
-        <button class="text-black font-medium text-base border rounded px-8 py-3 btn-active" id="dontation_btn">Donation</button>
+        <button class="text-black font-medium text-base border rounded px-8 py-3 btn-active" id="donation_btn">Donation</button>
         <button class="text-black font-medium text-base border rounded px-8 py-3" id="history_btn">History</button>
       </div>
     </div>
@@ -81,7 +81,7 @@
   <!-- banner end -->
 
   <!-- categories start -->
-  <section class="py-10 my-10 bg-white">
+  <section class="py-10 my-10 bg-white" id="donation">
     <div class="container mx-auto px-4 sm:px-0">
       <!-- donation container -->
       <div class="flex flex-col gap-8 justify-center">
@@ -154,6 +154,16 @@
   </section>
   <!-- categories end -->
 
+  <!-- history start -->
+  <section class="py-10 my-10 bg-white h-screen hidden" id="history">
+    <div class="container mx-auto">
+      <div class="py-10">
+        <h1 class="text-xl text-black">Transaction History</h1>
+      </div>
+    </div>
+  </section>
+  <!-- history end -->
+
   <!-- footer start -->
   <footer class="bg-slate-900 py-6">
     <div class="container mx-auto">
@@ -163,5 +173,9 @@
     </div>
   </footer>
   <!-- footer end -->
+
+  <!-- javascript files -->
+  <script src="./Assets/JavaScript/utilities.js"></script>
+  <script src="./Assets/JavaScript/app.js"></script>
 </body>
 </html>
