@@ -50,7 +50,7 @@ function transactionSummary(donation_title, donation_money) {
   let historyDiv = document.createElement("div");
   historyDiv.className = "border px-5 py-5 rounded";
   historyDiv.innerHTML = `
-    <h2 class="text-xl text-black, font-bold mb-2">${donation_money} Taka is ${donation_title}</h2>
+    <h2 class="text-xl text-black, font-bold mb-2">${donation_money} Taka is donated for, ${donation_title}</h2>
     <p class="text-sm text-gray-500">Date: ${date.toDateString()} ${date.toTimeString()}</p>
   `;
   transactionContainer.appendChild(historyDiv);

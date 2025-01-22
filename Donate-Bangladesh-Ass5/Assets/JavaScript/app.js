@@ -23,16 +23,25 @@ donationMoneyHandlerOne.addEventListener("click", function(e) {
   let currentTotal = getTextFieldValueById("total_balance");
   let donationTitle = getTitleById("cd_title-one");
 
-  if(!isNaN(donationMoney) && donationMoney > 0 && donationMoney <= currentTotal) {
-    let newCurrentBalance = currentMoney + donationMoney;
-    let newCurrentTotal = currentTotal - donationMoney;
-    setTextValueById("cdb-one", "total_balance", newCurrentBalance, newCurrentTotal);
-    transactionSummary(donationTitle, donationMoney);
-    alert("Donation Successful!");
-    clearInputFieldById("cd_amount-one");
-  } else if(currentTotal === 0) {
-    alert("You do not have sufficient balance!");
-  } else {
-    alert("Invalid Number!");
-  }
+  donationCampaign("cdb-one", "total_balance", "cd_amount-one", donationMoney, currentMoney, currentTotal, donationTitle);
+});
+
+donationMoneyHandlerTwo.addEventListener("click", function(e) {
+  e.preventDefault();
+  let donationMoney = getInputValueById("cd_amount-two");
+  let currentMoney = getTextFieldValueById("cdb-two");
+  let currentTotal = getTextFieldValueById("total_balance");
+  let donationTitle = getTitleById("cd_title-two");
+
+  donationCampaign("cdb-two", "total_balance", "cd_amount-two", donationMoney, currentMoney, currentTotal, donationTitle);
+});
+
+donationMoneyHandlerThree.addEventListener("click", function(e) {
+  e.preventDefault();
+  let donationMoney = getInputValueById("cd_amount-three");
+  let currentMoney = getTextFieldValueById("cdb-three");
+  let currentTotal = getTextFieldValueById("total_balance");
+  let donationTitle = getTitleById("cd_title-three");
+
+  donationCampaign("cdb-three", "total_balance", "cd_amount-three", donationMoney, currentMoney, currentTotal, donationTitle);
 });
