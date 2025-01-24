@@ -6,13 +6,15 @@ function donationCampaign(id_1, id_2, id_3, d_money, c_money, c_total, d_title) 
     setTextValueById(id_1, id_2, newC_balance, newC_total);
     transactionSummary(d_title, d_money);
     clearInputFieldById(id_3);
-    // alert("Donation Successful!");
     my_modal_5.showModal();
+    return;
   } else if (c_total === 0) {
     clearInputFieldById(id_3);
     alert("You do not have sufficient balance in your account!");
+    return;
   } else {
     clearInputFieldById(id_3);
     alert("Invalid Number!");
+    return;
   }
 }
