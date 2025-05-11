@@ -7,6 +7,14 @@ function getTimeString(times) {
   return `${hour}hrs ${mins}mins ${sec}sec ago`;
 }
 
+//Active Button Remove:
+function removeActiveClass() {
+  let buttons = document.getElementsByClassName("active");
+  for (let button of buttons) {
+    button.classList.remove("active");
+  }
+}
+
 //Load Categories buttons:
 function loadCategories() {
   fetch("https://openapi.programming-hero.com/api/phero-tube/categories")
@@ -19,8 +27,27 @@ function loadCategories() {
 function loadAllVideos() {
   fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
     .then((res) => res.json())
-    .then((data) => displayAllVideos(data.videos))
+    .then((data) => {
+      removeActiveClass();
+      document.getElementById("btn-all").classList.add("active");
+      displayVideos(data.videos);
+    })
     .catch((e) => console.log(e));
+}
+
+//Load Category Videos:
+function loadCategoryVideos(category_id) {
+  const url = `https://openapi.programming-hero.com/api/phero-tube/category/${category_id}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      removeActiveClass();
+      let clickedButton = document.getElementById(`btn-${category_id}`);
+      clickedButton.classList.add("active");
+      displayVideos(data.category);
+    })
+    .catch(error => console.log(error));
 }
 
 //Display Categories:
@@ -30,17 +57,31 @@ function displayCategories(categories) {
   categories.forEach((category) => {
     let categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-    <button class="btn btn-sm">${category.category}</button>
+    <button id="btn-${category.category_id}" onclick="loadCategoryVideos(${category.category_id})" class="btn btn-sm">${category.category}</button>
     `;
     categoryContainer.append(categoryDiv);
   });
 }
 
 //Display All Videos:
-function displayAllVideos(videos) {
+function displayVideos(videos) {
   let videosContainer = document.getElementById("videos-container");
   videosContainer.innerHTML = "";
 
+   if (videos.length === 0) {
+    videosContainer.classList.remove("grid");
+    videosContainer.innerHTML = `
+      <div class="flex justify-center">
+        <div class="w-1/2 text-center">
+          <img class="w-[120px] mx-auto" src="./Assets/Images/Error.png" alt="">
+          <h2 class="text-xl text-black font-bold mt-4">Oops!!! Sorry, There is no content here!</h2>
+        </div>
+      </div>
+    `;
+   } else {
+    videosContainer.classList.add("grid");
+   }
+  
   videos.forEach((video) => {
     let {profile_name, profile_picture, verified} = video.authors[0];
     let {title, thumbnail, others:{posted_date, views},} = video;
