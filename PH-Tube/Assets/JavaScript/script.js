@@ -24,8 +24,8 @@ function loadCategories() {
 }
 
 //Load All Videos:
-function loadAllVideos() {
-  fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
+function loadAllVideos(search_text = "") {
+  fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${search_text}`)
     .then((res) => res.json())
     .then((data) => {
       removeActiveClass();
@@ -48,6 +48,54 @@ function loadCategoryVideos(category_id) {
       displayVideos(data.category);
     })
     .catch(error => console.log(error));
+}
+
+//Load Video Details:
+function loadVideoDetails(video_id) {
+  let url = `https://openapi.programming-hero.com/api/phero-tube/video/${video_id}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayVideoDetails(data.video))
+    .catch(e => console.log(e));
+}
+
+//Display Video Details:
+function displayVideoDetails(video) {
+  let detailsContainer = document.getElementById("details-container");
+  document.getElementById("video-details").showModal();
+  detailsContainer.innerHTML = `
+  <div class="card bg-base-100">
+    <figure class="relative">
+      <img class="w-full h-[180px] object-cover rounded" src="${video?.thumbnail}" alt="Shoes" />
+      <div class="absolute bottom-3 right-3">
+        <p class="${video?.others?.posted_date !== "" ? "bg-black text-gray-200 py-1 px-2 text-sm rounded":""}">
+          ${video?.others?.posted_date !== "" ? getTimeString(video.others.posted_date):""}
+        </p>
+      </div>
+    </figure>
+    <div class="card-body px-2">
+      <div class="flex items-start gap-4">
+        <div>
+          <figure>
+            <img class="w-[40px] h-[40px] object-cover rounded-full" src="${video?.authors[0]?.profile_picture}" alt="Profile-Picture" />
+          </figure>
+        </div>
+        <div>
+          <h3 class="text-lg text-black font-semibold">${video?.title}</h3>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-base text-gray-500">${video?.authors[0]?.profile_name}</h3>
+              ${video?.authors[0]?.verified === true ? '<figure><img class="w-[16px] h-[16px]" src="./Assets/Images/verify.png" /></figure>':""}
+            </div>
+            <p class="text-gray-500 mt-1">${video?.others?.views} views</p>
+            <p class="text-gray-500 mt-1">Video Id: ${video?.video_id}</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-500 mt-1">${video?.description}</p>
+    </div>
+  </div>
+  `;
 }
 
 //Display Categories:
@@ -110,7 +158,10 @@ function displayVideos(videos) {
                 <h3 class="text-base text-gray-500">${profile_name}</h3>
                 ${verified === true ? '<figure><img class="w-[16px] h-[16px]" src="./Assets/Images/verify.png" /></figure>':""}
               </div>
-              <p class="text-gray-500 mt-1">${views} views</p>
+              <div class="flex items-center gap-4">
+                <p class="text-gray-500 mt-1">${views} views</p>
+                <button onclick="loadVideoDetails('${video.video_id}')" class="text-sm border border-gray-200 text-gray-500 px-2 rounded mt-2 cursor-pointer hover:bg-gray-100">Show Details</button>
+              </div>
             </div>
           </div>
         </div>
@@ -127,3 +178,9 @@ loadCategories();
 
 //Call Load All Videos:
 loadAllVideos();
+
+//Search functionality integration:
+document.getElementById("search-input").addEventListener("keyup", function(e) {
+  let inputValue = e.target.value;
+  loadAllVideos(inputValue);
+});
