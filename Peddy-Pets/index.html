@@ -42,12 +42,12 @@
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
-            <a href="#" class="flex gap-1 items-center"
+            <a href="#" class="inline-flex gap-1 items-center"
               ><img
-                class="w-[15px]"
+                class="w-[20px]"
                 src="./Asstes/Images/logo.webp"
                 alt=""
-              /><span class="text-xl font-extrabold">Peddy</span></a
+              /><span class="text-2xl font-extrabold">Peddy</span></a
             >
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -74,7 +74,7 @@
       <!-- banner section -->
       <section class="py-12">
         <div class="container mx-auto">
-          <div class="flex flex-col justify-center">
+          <div class="flex flex-col justify-center px-4 md:px-0">
             <div class="text-center">
               <span class="text-gray-600 text-lg"
                 >Bringing Families Together ❤️‍🔥</span
@@ -122,14 +122,14 @@
       </section>
 
       <!-- pets section -->
-      <section class="pt-4 pb-10">
+      <section class="pt-4 pb-12">
         <div class="container mx-auto">
           <article class="flex justify-between px-4 md:px-0">
             <h3 class="font-extrabold text-lg">Best Deal For You</h3>
             <button class="btn bg-teal-700 text-white rounded">Sort By Price</button>
           </article>
-          <div class="flex flex-row gap-6 mt-4">
-            <div id="pets-container" class="basis-2/2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="flex flex-col md:flex-row gap-6 mt-4 px-4 md:px-0">
+            <div id="pets-container" class="basis-2/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             </div>
             <div id="liked-pets" class="basis-1/3 border border-gray-200 rounded-md">
@@ -139,6 +139,49 @@
         </div>
       </section>
     </main>
+
+    <!-- footer section -->
+    <footer class="py-10 bg-black">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-between gap-10 px-4 md:px-0">
+          <div class="text-left">
+            <a href="#" class="inline-flex items-center gap-2 mb-2">
+              <img class="w-[30px]" src="./Asstes/Images/logo.webp" alt="Logo">
+              <span class="text-xl font-extrabold text-white">Peddy</span>
+            </a>
+            <div class="mt-2">
+              <p class="text-base text-gray-500 font-normal mb-1">Location: av. Washington 165, NY CA 54003</p>
+              <p class="text-base text-gray-500 font-normal mb-1">Phone: +31 85 964 47 25</p>
+              <p class="text-base text-gray-500 font-normal mb-1">Email: info@yourdomain.com</p>
+              <p class="text-base text-gray-500 font-normal mb-1">Openings hours: 9.00 AM - 5.00 PM</p>
+            </div>
+            <div class="mt-4 inline-flex items-center gap-4">
+              <a href="#"><img src="./Asstes/Images/facebook.png" alt="facebook"></a>
+              <a href="#"><img src="./Asstes/Images/instagram.png" alt="instagram"></a>
+              <a href="#"><img src="./Asstes/Images/twitter.png" alt="twitter"></a>
+              <a href="#"><img src="./Asstes/Images/youtube.png" alt="youtube"></a>
+            </div>
+          </div>
+          <div class="text-left">
+            <h3 class="text-xl text-white font-extrabold mb-4">Useful Links</h3>
+            <ul>
+              <li class="mb-2"><a class="text-gray-500" href="#">Home</a></li>
+              <li class="mb-2"><a class="text-gray-500" href="#">About Us</a></li>
+              <li class="mb-2"><a class="text-gray-500" href="#">Animals</a></li>
+              <li class="mb-2"><a class="text-gray-500" href="#">Foundation</a></li>
+              <li class="mb-2"><a class="text-gray-500" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="class="text-left"">
+            <h3 class="text-xl text-white font-extrabold mb-4">Drop Message</h3>
+            <form>
+              <input class="block outline-none px-4 py-2 rounded-lg mb-4" type="email" placeholder="Enter your email" id="email" name="email">
+              <input class="block w-full outline-none bg-teal-700 text-white py-1 rounded-lg cursor-pointer" type="submit" value="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- JavaScript Files -->
     <script src="./Asstes/JavaScript/utilities.js"></script>
