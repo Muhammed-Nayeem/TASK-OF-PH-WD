@@ -1,3 +1,11 @@
+//Remove Active Class:
+const removeActiveClass = () => {
+  let buttons = document.getElementsByClassName("active");
+  for (let button of buttons) {
+    button.classList.remove("active");
+  }
+};
+
 //Load Categories:
 const loadCategories = async() => {
   try {
@@ -25,6 +33,9 @@ const loadByCategoryName = async(category_name) => {
   try {
     let response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category_name}`);
     let data = await response.json();
+    removeActiveClass();
+    let clickedBtn = document.getElementById(`btn-${category_name}`);
+    clickedBtn.classList.add("active");
     displayPets(data.data);
   } catch(e) {
     console.log(e);
@@ -37,11 +48,11 @@ const displayCategories = (categories) => {
   categories.map((category) => {
     let categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer" id="btn-${category.id}" onclick="loadByCategoryName('${category.category}')">
+      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer transition-all" id="btn-${category.category}" onclick="loadByCategoryName('${category.category}')">
         <img class="w-[35px]" src="${category.category_icon}" alt="${category.category}" />
         <span class="text-black font-bold">${category.category}</span>
       </button>
-    `;
+    `
     categoriesContainer.append(categoryDiv);
   });
 };

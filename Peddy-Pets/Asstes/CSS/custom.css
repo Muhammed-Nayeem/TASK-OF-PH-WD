@@ -8,3 +8,10 @@ html {
 body {
   font-family: "Lato", sans-serif;
 }
+
+.active {
+    border: 1px solid teal;
+    border-radius: 50px;
+    background-color: rgb(0 128 128 / 10%);
+    transition: all .5s ease;
+}
