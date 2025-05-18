@@ -20,13 +20,24 @@ const loadAllPets = async() => {
   }
 };
 
+//Load Pets By Category Name:
+const loadByCategoryName = async(category_name) => {
+  try {
+    let response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category_name}`);
+    let data = await response.json();
+    displayPets(data.data);
+  } catch(e) {
+    console.log(e);
+  }
+};
+
 //Display Categories:
 const displayCategories = (categories) => {
   let categoriesContainer = document.getElementById("categories-container");
   categories.map((category) => {
     let categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer" id="btn-${category.id}">
+      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer" id="btn-${category.id}" onclick="loadByCategoryName('${category.category}')">
         <img class="w-[35px]" src="${category.category_icon}" alt="${category.category}" />
         <span class="text-black font-bold">${category.category}</span>
       </button>
