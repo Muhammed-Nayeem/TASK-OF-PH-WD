@@ -53,14 +53,41 @@ const loadByPetId = async(pet_id) => {
   }
 };
 
+//Store Liked Pets:
+const storeLikedPets = async(pet_id) => {
+  try {
+    let response = await fetch("https://openapi.programming-hero.com/api/peddy/pets");
+    let data = await response.json();
+    let pets = data.pets.filter((pet) => pet.petId === pet_id);
+    displayLikedPets(pets);
+  } catch(e) {
+    console.log(e);
+  }
+};
+
+//Display Liked Pets:
+const displayLikedPets = (pets) => {
+  let likedPetsContainer = document.getElementById("liked-pets");
+  pets.map((pet) => {
+    let likedCard = document.createElement("div");
+    likedCard.classList.add("border", "border-gray-100", "rounded-md", "p-1");
+    likedCard.innerHTML = `
+    <figure>
+      <img src="${pet?.image}" alt="${pet?.pet_name || "pet"}" class="rounded-md" />
+    </figure>
+    `;
+    likedPetsContainer.append(likedCard);
+  });
+};
+
 //Display Categories:
 const displayCategories = (categories) => {
   let categoriesContainer = document.getElementById("categories-container");
   categories.map((category) => {
     let categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer transition-all" id="btn-${category.category}" onclick="loadByCategoryName('${category.category}')">
-        <img class="w-[35px]" src="${category.category_icon}" alt="${category.category}" />
+      <button class="flex justify-center items-center gap-4 border px-12 border-gray-300 py-3 rounded cursor-pointer transition-all w-full" id="btn-${category.category}" onclick="loadByCategoryName('${category.category}')">
+        <img class="w-[35px] h-[35px]" src="${category.category_icon}" alt="${category.category}" />
         <span class="text-black font-bold">${category.category}</span>
       </button>
     `
@@ -81,9 +108,9 @@ const displayPets = (pets) => {
     <figure class="mx-auto">
       <img src="./Asstes/Images/error.webp" alt="No-Data-Found" />
     </figure>
-    <div class="text-center">
+    <div class="text-center md:w-[700px] mx-auto">
       <h3 class="text-2xl font-extrabold my-4">No Information Available</h3>
-      <p class="text-base">It is a long established fact that a reader will be distracted by the readable content of a page when looking at<br/>its layout. The point of using Lorem Ipsum is that it has a.</p>
+      <p class="text-base">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
     </div>
     `;
     petsContainer.append(errorDiv);
@@ -117,7 +144,7 @@ const displayPets = (pets) => {
         </li>
       </ul>
       <div class="flex justify-between items-center border-t border-gray-200">
-        <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700" onclick="storeLikedPets(${pet.petId})"><i class="fa-regular fa-thumbs-up"></i></button>
         <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700">Adopt</button>
         <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700" onclick="loadByPetId(${pet.petId})">Details</button>
       </div>
@@ -160,8 +187,8 @@ const displayPetDetails = (pet) => {
         <span>Vaccinated Status: ${pet?.vaccinated_status || "N/A"}</span>
       </li>
     </ul>
-    <div class="my-2 text-left">
-      <h4 class="text-lg font-bold mb-2">Details Information</h4>
+    <div class="my-4 text-left border-t border-gray-200">
+      <h4 class="text-lg font-bold pt-2 mb-2">Details Information</h4>
       <p>${pet?.pet_details || "N/A"}</p>
     </div>
   </div>
