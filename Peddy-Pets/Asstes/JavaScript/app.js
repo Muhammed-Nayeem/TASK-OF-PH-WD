@@ -17,7 +17,6 @@ const displayCategories = (categories) => {
 const displayPets = (pets) => {
   let petsContainer = document.getElementById("pets-container");
   petsContainer.innerHTML = "";
-
   if (pets.length === 0) {
     petsContainer.classList.remove("grid");
     let errorDiv = document.createElement("div");
@@ -63,7 +62,7 @@ const displayPets = (pets) => {
       </ul>
       <div class="flex justify-between items-center border-t border-gray-200">
         <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700" onclick="storeLikedPets(${pet.petId})"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700">Adopt</button>
+        <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700" id="btn-${pet.petId}" onclick="adoptionHandler(${pet.petId})">Adopt</button>
         <button class="mt-4 px-4 py-1 rounded-md cursor-pointer border border-gray-200 text-teal-700 hover:bg-teal-700 hover:text-white hover:border-teal-700" onclick="loadByPetId(${pet.petId})">Details</button>
       </div>
     </div>

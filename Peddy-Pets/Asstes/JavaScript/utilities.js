@@ -1,3 +1,29 @@
+//Adoption Button Event-Handler:
+const adoptionHandler = (pad_id) => {
+  document.getElementById("timer-modal").showModal();
+  let btn = document.getElementById(`btn-${pad_id}`);
+  let counter = document.querySelector(".counter");
+  counter.textContent = 3;
+  let count = 3;
+  
+  //time will be counted 3 - 1:
+  setInterval(() => {
+    if (count > 1) {
+      count--;
+      counter.textContent = count;
+      btn.textContent = "Adopted";
+      btn.disabled = true;
+      btn.classList.remove("cursor-pointer");
+      btn.classList.add("cursor-not-allowed", "opacity-40");
+    }
+  }, 1000);
+
+  //timer modal close after 3 seconds when the counter value is 1:
+  setTimeout(() => {
+    document.getElementById("timer-modal").close();
+  },  3000);
+};
+
 //Remove Active Class:
 const removeActiveClass = () => {
   let buttons = document.getElementsByClassName("active");
