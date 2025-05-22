@@ -31,7 +31,8 @@ const displayPets = (pets) => {
     </div>
     `;
     petsContainer.append(errorDiv);
-    hideLoader();
+    // hideLoader();
+    setTimeout(() => hideLoader(), 1000);
   } else {
     petsContainer.classList.add("grid");
     pets.map((pet) => {
@@ -70,7 +71,8 @@ const displayPets = (pets) => {
       `;
       petsContainer.append(cardDiv);
     });
-    hideLoader();
+    // hideLoader();
+    setTimeout(() => hideLoader(), 1000);
   }
 };
 

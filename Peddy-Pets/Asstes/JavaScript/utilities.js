@@ -58,7 +58,8 @@ const loadCategories = async() => {
 //Load All Pets:
 const loadAllPets = async() => {
   try {
-    showLoader();
+    // showLoader()
+    setTimeout(() => showLoader(), 200);
     let response = await fetch("https://openapi.programming-hero.com/api/peddy/pets");
     let data = await response.json();
     displayPets(data.pets);
@@ -70,7 +71,8 @@ const loadAllPets = async() => {
 //Load Pets By Category Name:
 const loadByCategoryName = async(category_name) => {
   try {
-    showLoader();
+    // showLoader()
+    setTimeout(() => showLoader(), 200);
     let response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category_name}`);
     let data = await response.json();
     removeActiveClass();
