@@ -1,3 +1,15 @@
+//Show Loader:
+const showLoader = () => {
+  document.getElementById("loader").classList.remove("hidden");
+  document.getElementById("pets-container").classList.add("hidden");
+};
+
+//Hider Loader:
+const hideLoader = () => {
+  document.getElementById("loader").classList.add("hidden");
+  document.getElementById("pets-container").classList.remove("hidden");
+};
+
 //Adoption Button Event-Handler:
 const adoptionHandler = (pad_id) => {
   document.getElementById("timer-modal").showModal();
@@ -46,6 +58,7 @@ const loadCategories = async() => {
 //Load All Pets:
 const loadAllPets = async() => {
   try {
+    showLoader();
     let response = await fetch("https://openapi.programming-hero.com/api/peddy/pets");
     let data = await response.json();
     displayPets(data.pets);
@@ -57,6 +70,7 @@ const loadAllPets = async() => {
 //Load Pets By Category Name:
 const loadByCategoryName = async(category_name) => {
   try {
+    showLoader();
     let response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category_name}`);
     let data = await response.json();
     removeActiveClass();
