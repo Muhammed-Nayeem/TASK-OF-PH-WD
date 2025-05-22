@@ -1,6 +1,6 @@
 ## Project Name: Peddy
 
-Peddy; A simple and interactive frontend based project which is showcasing pets or animals. Her you can also find the pets by pet category. This is fully API integrated frontend project with mobile friendly responsive design.
+Peddy; A simple and interactive frontend based project which is showcasing pets or animals. Here you can also find the pets by pet category. This is fully API integrated frontend project with mobile friendly responsive design.
 
 ### Technology Used:
 ---
