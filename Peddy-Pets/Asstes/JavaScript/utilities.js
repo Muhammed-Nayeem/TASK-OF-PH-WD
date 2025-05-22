@@ -1,3 +1,6 @@
+//Sort Button:
+const sortButton = document.getElementById("sort-btn");
+
 //Show Loader:
 const showLoader = () => {
   document.getElementById("loader").classList.remove("hidden");
@@ -9,6 +12,27 @@ const hideLoader = () => {
   document.getElementById("loader").classList.add("hidden");
   document.getElementById("pets-container").classList.remove("hidden");
 };
+
+//Sort By Price: From All Products
+sortButton.addEventListener("click", function() {
+  // showLoader();
+  setTimeout(() => showLoader(), 200);
+  fetch("https://openapi.programming-hero.com/api/peddy/pets")
+    .then(res => res.json())
+    .then(data => {
+      let sortArr = data.pets.sort((a, b) => {
+        if (a.price > b.price) {
+          return -1;
+        } else if (a.price < b.price) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      displayPets(sortArr);
+    })
+    .catch(e => console.log(e));
+});
 
 //Adoption Button Event-Handler:
 const adoptionHandler = (pad_id) => {
